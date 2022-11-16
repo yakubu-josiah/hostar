@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
-Route::prefix('about')->group(function () {
+Route::prefix('/about')->group(function () {
     Route::controller(AboutController::class)->group(function (){
         Route::get('/', 'index')->name('about');
     });
