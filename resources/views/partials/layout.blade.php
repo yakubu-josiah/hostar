@@ -52,6 +52,7 @@
     <link rel='stylesheet' id='elementor-icons-css' href="{{ asset('css/elementor-icons.min.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-legacy-css' href="{{ asset('css/frontend-legacy.min.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css' href="{{ asset('css/frontend.min.css') }}" type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-post-19-css' href="{{ asset('css/post-19.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-post-589-css' href="{{ asset('css/post-589.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-5-all-css' href="{{ asset('css/all.min.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-4-shim-css' href="{{ asset('css/v4-shims.min.css') }}" type='text/css' media='all' />
