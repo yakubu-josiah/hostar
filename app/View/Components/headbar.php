@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class components.headbar extends Component
+class headbar extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class components.headbar extends Component
      */
     public function render()
     {
-        return view('components.components.headbar');
+        return view('components.headbar');
     }
 }
