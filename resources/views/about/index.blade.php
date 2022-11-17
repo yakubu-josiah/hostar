@@ -357,14 +357,6 @@
                                                         <h2>Our Creative Team</h2>
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                                             do eiusmod tempor.
-
-
-
-
-
-
-
-
                                                         </p>
                                                     </div>
                                                 </div>
@@ -422,7 +414,7 @@
                                                                     alt="">
                                                             </div>
                                                             <div class="details">
-                                                                <h3>Julia D’Soza</h3>
+                                                                <h3>Julia D'Soza</h3>
                                                                 <p>Web Developer</p>
                                                                 <ul>
                                                                 </ul>
@@ -510,7 +502,7 @@
                                             data-widget_type="heading.default">
                                             <div class="elementor-widget-container">
                                                 <h2 class="elementor-heading-title elementor-size-default">What People
-                                                    Say’s About Us
+                                                    Say's About Us
                                                 </h2>
                                             </div>
                                         </div>
@@ -646,8 +638,8 @@
                                 </div>
                                 <div class="textwidget custom-html-widget">
                                     <ul>
-                                        <li><a href="https://wpocean.com/wp/hostar/about/">About Us</a></li>
-                                        <li><a href="https://wpocean.com/wp/hostar/hosting/">Our Services</a></li>
+                                        <li><a href="{{ route('about') }}">About Us</a></li>
+                                        <li><a href="{{ route('hosting') }}">Our Services</a></li>
                                         <li><a href="https://wpocean.com/wp/hostar/pricing/">Our Pricing</a></li>
                                         <li><a href="https://wpocean.com/wp/hostar/blog/">Latest News</a></li>
                                         <li><a href="https://wpocean.com/wp/hostar/contact/">Contact Us</a></li>
@@ -682,7 +674,7 @@
                 <div class="row">
                     <div class="separator"></div>
                     <div class="col col-xs-12">
-                        <p>&copy; Copyright 2022 | <a href="https://wpocean.com/wp/hostar">Hostar – Web Hosting</a> |
+                        <p>&copy; Copyright 2022 | <a href="{{ route('home') }}">Hostar - Web Hosting</a> |
                             All right reserved.</p>
                     </div>
                 </div>

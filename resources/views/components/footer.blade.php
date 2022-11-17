@@ -50,7 +50,7 @@
                             <div class="textwidget custom-html-widget">
                                 <ul>
                                     <li><a href="{{ route('about') }}">About Us</a></li>
-                                    <li><a href="https://wpocean.com/wp/hostar/hosting/">Our Services</a></li>
+                                    <li><a href="{{ route('services') }}">Our Services</a></li>
                                     <li><a href="https://wpocean.com/wp/hostar/pricing/">Our Pricing</a></li>
                                     <li><a href="https://wpocean.com/wp/hostar/blog/">Latest News</a></li>
                                     <li><a href="https://wpocean.com/wp/hostar/contact/">Contact Us</a></li>
@@ -85,7 +85,7 @@
             <div class="row">
                 <div class="separator"></div>
                 <div class="col col-xs-12">
-                    <p>&copy; Copyright 2022 | <a href="https://wpocean.com/wp/hostar">Hostar – Web Hosting</a>
+                    <p>&copy; Copyright 2022 | <a href="{{ route('home') }}">Hostar - Web Hosting</a>
                         | All right reserved.</p>
                 </div>
             </div>

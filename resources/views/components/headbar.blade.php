@@ -39,34 +39,34 @@
                             href="{{ route('about') }}">About</a></li>
                     <li id="menu-item-32"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32">
-                        <a href="https://wpocean.com/wp/hostar/hosting/">Hosting</a>
+                        <a href="{{ route('hosting') }}">Hosting</a>
                         <ul class="sub-menu">
                             <li id="menu-item-300"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-300">
-                                <a href="https://wpocean.com/wp/hostar/service/shared-hosting/">Shared
+                                <a href="{{ route('services') }}">Shared
                                     Hosting</a>
                             </li>
                             <li id="menu-item-298"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-298">
-                                <a href="https://wpocean.com/wp/hostar/service/cloud-hosting/">Cloud Hosting</a>
+                                <a href="{{ route('services') }}">Cloud Hosting</a>
                             </li>
                             <li id="menu-item-295"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-295">
-                                <a href="https://wpocean.com/wp/hostar/service/domain-name/">WordPress
+                                <a href="{{ route('services') }}">WordPress
                                     Hosting</a>
                             </li>
                             <li id="menu-item-296"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-296">
-                                <a href="https://wpocean.com/wp/hostar/service/dedicated-hosting/">Dedicated
+                                <a href="{{ route('services') }}">Dedicated
                                     Hosting</a>
                             </li>
                             <li id="menu-item-299"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-299">
-                                <a href="https://wpocean.com/wp/hostar/service/vps-hosting/">VPS Hosting</a>
+                                <a href="{{ route('services') }}">VPS Hosting</a>
                             </li>
                             <li id="menu-item-297"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-297">
-                                <a href="https://wpocean.com/wp/hostar/service/reseller-hosting/">Reseller
+                                <a href="{{ route('services') }}">Reseller
                                     Hosting</a>
                             </li>
                         </ul>
@@ -77,7 +77,7 @@
                         <ul class="sub-menu">
                             <li id="menu-item-303"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-303">
-                                <a href="{{ route('home') }}">About</a>
+                                <a href="{{ route('about') }}">About</a>
                             </li>
                             <li id="menu-item-302"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302">
@@ -85,11 +85,11 @@
                             </li>
                             <li id="menu-item-305"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305">
-                                <a href="https://wpocean.com/wp/hostar/hosting/">Service</a>
+                                <a href="{{ route('hosting') }}">Service</a>
                             </li>
                             <li id="menu-item-304"
                                 class="menu-item menu-item-type-post_type menu-item-object-service menu-item-304">
-                                <a href="https://wpocean.com/wp/hostar/service/dedicated-hosting/">Service
+                                <a href="{{ route('services') }}">Service
                                     single</a>
                             </li>
                             <li id="menu-item-310"
@@ -115,7 +115,7 @@
                             </li>
                             <li id="menu-item-526"
                                 class="menu-item menu-item-type-post_type menu-item-object-product menu-item-526">
-                                <a href="https://wpocean.com/wp/hostar/product/cloud-hosting/">Shop Single</a>
+                                <a href="{{ route('services') }}">Shop Single</a>
                             </li>
                         </ul>
                     </li>

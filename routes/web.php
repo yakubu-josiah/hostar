@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HostingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,5 +27,12 @@ Route::get('/account-sign-in', function () {
 Route::prefix('/about')->group(function () {
     Route::controller(AboutController::class)->group(function (){
         Route::get('/', 'index')->name('about');
+    });
+});
+
+Route::prefix('/hosting')->group(function (){
+    Route::controller(HostingController::class)->group(function (){
+        Route::get('/', 'index')->name('hosting');
+        Route::get('/our-services', 'services')->name('services');
     });
 });

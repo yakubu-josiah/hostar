@@ -172,10 +172,8 @@
                                                                             </p>
                                                                         </div>
                                                                         <div class="btns">
-                                                                            <a href="https://wpocean.com/wp/hostar/service/shared-hosting/"
-                                                                                class="theme-btn">Get Started</a><a
-                                                                                href="https://wpocean.com/wp/hostar/contact/"
-                                                                                class="theme-btn-s2">Know More</a>
+                                                                            <a href="{{ route('hosting') }}" class="theme-btn">Get Started</a>
+                                                                            <a href="https://wpocean.com/wp/hostar/contact/" class="theme-btn-s2">Know More</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -371,7 +369,7 @@
                                                         <div class="section-title">
                                                             <h2>Our Pricing Plan</h2>
                                                             <p>Start saving today.If you are not happy with our services
-                                                                for whatever reason, we’ll refund your payment.</p>
+                                                                for whatever reason, we'll refund your payment.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -412,7 +410,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="https://wpocean.com/wp/hostar/product/cloud-hosting/"
+                                                                                <a href="{{ route('services') }}"
                                                                                     class="wpo-pricing-btn ">Started
                                                                                     Now</a>
                                                                                 <div class="shape-1"></div>
@@ -437,7 +435,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="https://wpocean.com/wp/hostar/product/dedicated-hosting/"
+                                                                                <a href="{{ route('services') }}"
                                                                                     class="wpo-pricing-btn ">Started
                                                                                     Now</a>
                                                                                 <div class="shape-1"></div>
@@ -462,7 +460,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="https://wpocean.com/wp/hostar/product/reseller-hosting/"
+                                                                                <a href="{{ route('services') }}"
                                                                                     class="wpo-pricing-btn ">Started
                                                                                     Now</a>
                                                                                 <div class="shape-1"></div>
@@ -491,7 +489,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="https://wpocean.com/wp/hostar/product/reseller-hosting/"
+                                                                                <a href="{{ route('services') }}"
                                                                                     class="wpo-pricing-btn">Chose Plan
                                                                                     Now</a>
                                                                             </div>
@@ -511,7 +509,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="https://wpocean.com/wp/hostar/product/dedicated-hosting/"
+                                                                                <a href="{{ route('services') }}"
                                                                                     class="wpo-pricing-btn">Chose Plan
                                                                                     Now</a>
                                                                             </div>
@@ -531,7 +529,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="https://wpocean.com/wp/hostar/product/cloud-hosting/"
+                                                                                <a href="{{ route('services') }}"
                                                                                     class="wpo-pricing-btn">Chose Plan
                                                                                     Now</a>
                                                                             </div>
@@ -589,7 +587,7 @@
                                                                         </div>
                                                                         <div class="wpo-service-text">
                                                                             <h2><a
-                                                                                    href="https://wpocean.com/wp/hostar/service/domain-name/">WordPress
+                                                                                    href="{{ route('services') }}">WordPress
                                                                                     Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
@@ -606,7 +604,7 @@
                                                                         </div>
                                                                         <div class="wpo-service-text">
                                                                             <h2><a
-                                                                                    href="https://wpocean.com/wp/hostar/service/dedicated-hosting/">Dedicated
+                                                                                    href="{{ route('services') }}">Dedicated
                                                                                     Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
@@ -623,7 +621,7 @@
                                                                         </div>
                                                                         <div class="wpo-service-text">
                                                                             <h2><a
-                                                                                    href="https://wpocean.com/wp/hostar/service/reseller-hosting/">Reseller
+                                                                                    href="{{ route('services') }}">Reseller
                                                                                     Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
@@ -640,7 +638,7 @@
                                                                         </div>
                                                                         <div class="wpo-service-text">
                                                                             <h2><a
-                                                                                    href="https://wpocean.com/wp/hostar/service/cloud-hosting/">Cloud
+                                                                                    href="{{ route('services') }}">Cloud
                                                                                     Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
@@ -657,7 +655,7 @@
                                                                         </div>
                                                                         <div class="wpo-service-text">
                                                                             <h2><a
-                                                                                    href="https://wpocean.com/wp/hostar/service/vps-hosting/">VPS
+                                                                                    href="{{ route('services') }}">VPS
                                                                                     Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
@@ -674,7 +672,7 @@
                                                                         </div>
                                                                         <div class="wpo-service-text">
                                                                             <h2><a
-                                                                                    href="https://wpocean.com/wp/hostar/service/shared-hosting/">Shared
+                                                                                    href="{{ route('services') }}">Shared
                                                                                     Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
@@ -753,7 +751,7 @@
                                                 data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
                                                     <h2 class="elementor-heading-title elementor-size-default">What
-                                                        People Say’s About Us
+                                                        People Say's About Us
                                                     </h2>
                                                 </div>
                                             </div>

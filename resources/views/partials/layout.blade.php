@@ -57,7 +57,8 @@
     <link rel='stylesheet' id='font-awesome-5-all-css' href="{{ asset('css/all.min.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='font-awesome-4-shim-css' href="{{ asset('css/v4-shims.min.css') }}" type='text/css' media='all' />
     <link rel='stylesheet' id='elementor-post-59-css' href="{{ asset('css/post-59.css') }}" type='text/css' media='all' />
-
+    <link rel='stylesheet' id='elementor-post-23-css' href="{{ asset('css/post-23.css') }}" type='text/css' media='all' />
+    
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
             visibility: visible;
