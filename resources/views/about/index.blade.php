@@ -55,7 +55,7 @@
             <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
                 values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
             <feComponentTransfer color-interpolation-filters="sRGB">
-                <feFuncR type="table" tableValues="0 1" />
+                <feFuncR type="table" tableValues="0 1" /> 
                 <feFuncG type="table" tableValues="0 0.27843137254902" />
                 <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
                 <feFuncA type="table" tableValues="1 1" />
@@ -195,7 +195,7 @@
                                                             <div class="col col-md-4">
                                                                 <div class="about-img">
                                                                     <img decoding="async"
-                                                                        src="https://wpocean.com/wp/hostar/wp-content/uploads/2019/11/hero-1-vec-min.png"
+                                                                        src="{{ asset('images/hero-1-vec-min.png') }}"
                                                                         alt="">
                                                                 </div>
                                                             </div>
@@ -244,7 +244,7 @@
                                                                     </div>
                                                                     <div class="wpo-features-img">
                                                                         <img decoding="async"
-                                                                            src="https://wpocean.com/wp/hostar/wp-content/uploads/2019/12/feature-1.png"
+                                                                            src="{{ asset('images/feature-1.png') }}"
                                                                             alt="">
                                                                     </div>
                                                                 </div>
@@ -266,9 +266,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="wpo-features-img">
-                                                                        <img decoding="async"
-                                                                            src="https://wpocean.com/wp/hostar/wp-content/uploads/2019/12/feature-2.png"
-                                                                            alt="">
+                                                                        <img decoding="async" src="{{ asset('images/feature-2.png') }}" alt="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -289,9 +287,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="wpo-features-img">
-                                                                        <img decoding="async"
-                                                                            src="https://wpocean.com/wp/hostar/wp-content/uploads/2019/12/feature-3.png"
-                                                                            alt="">
+                                                                        <img decoding="async" src="{{ asset('images/feature-3.png') }}" alt="">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -322,9 +318,7 @@
                                             <div class="elementor-widget-container">
                                                 <div class="about-area">
                                                     <div class="video-holder">
-                                                        <img decoding="async"
-                                                            src="https://wpocean.com/wp/hostar/wp-content/uploads/2019/12/about.jpg"
-                                                            alt="">
+                                                        <img decoding="async" src="{{ asset('images/about.jpg') }}" alt="">
                                                         <div class="video">
                                                             <a href="https://www.youtube.com/embed/7e90gBu4pas?autoplay=1"
                                                                 class="video-btn" data-type="iframe"></a>
@@ -370,9 +364,7 @@
                                                     <div class="team-grids team-slider">
                                                         <div class="grid">
                                                             <div class="img-holder">
-                                                                <img decoding="async"
-                                                                    src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/01/team-4.jpg"
-                                                                    alt="">
+                                                                <img decoding="async" src="{{ asset('images/team-4.jpg') }}" alt="">
                                                             </div>
                                                             <div class="details">
                                                                 <h3>Angelica Watson</h3>
@@ -383,9 +375,7 @@
                                                         </div>
                                                         <div class="grid">
                                                             <div class="img-holder">
-                                                                <img decoding="async"
-                                                                    src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/03/team-2.jpg"
-                                                                    alt="">
+                                                                <img decoding="async" src="{{ asset('images/team-2.jpg') }}" alt="">
                                                             </div>
                                                             <div class="details">
                                                                 <h3>Robert Simon</h3>
@@ -396,9 +386,7 @@
                                                         </div>
                                                         <div class="grid">
                                                             <div class="img-holder">
-                                                                <img decoding="async"
-                                                                    src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/01/team-2.jpg"
-                                                                    alt="">
+                                                                <img decoding="async" src="{{ asset('images/team-2.jpg') }}" alt="">
                                                             </div>
                                                             <div class="details">
                                                                 <h3>Darothi Clandon</h3>
@@ -409,9 +397,7 @@
                                                         </div>
                                                         <div class="grid">
                                                             <div class="img-holder">
-                                                                <img decoding="async"
-                                                                    src="https://wpocean.com/wp/hostar/wp-content/uploads/2019/12/img-1.jpg"
-                                                                    alt="">
+                                                                <img decoding="async" src="{{ asset('images/img-1.jpg') }}" alt="">
                                                             </div>
                                                             <div class="details">
                                                                 <h3>Julia D'Soza</h3>
@@ -422,9 +408,7 @@
                                                         </div>
                                                         <div class="grid">
                                                             <div class="img-holder">
-                                                                <img decoding="async"
-                                                                    src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/03/team.jpg"
-                                                                    alt="">
+                                                                <img decoding="async" src="{{ asset('images/team.jpg') }}" alt="">
                                                             </div>
                                                             <div class="details">
                                                                 <h3>Angelica Watson</h3>
@@ -524,9 +508,7 @@
                                                                     </div>
                                                                     <div class="client-info">
                                                                         <div class="img-holder">
-                                                                            <img decoding="async"
-                                                                                src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/02/testi-1.1.jpg"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/testi-1.1.jpg') }}" alt="">
                                                                         </div>
                                                                         <div class="details">
                                                                             <h5>Robert Frost</h5>
@@ -542,9 +524,7 @@
                                                                     </div>
                                                                     <div class="client-info">
                                                                         <div class="img-holder">
-                                                                            <img decoding="async"
-                                                                                src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/02/testti-2.2.jpg"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/testti-2.2.jpg') }}" alt="">
                                                                         </div>
                                                                         <div class="details">
                                                                             <h5>Jhone Duo</h5>
@@ -560,9 +540,7 @@
                                                                     </div>
                                                                     <div class="client-info">
                                                                         <div class="img-holder">
-                                                                            <img decoding="async"
-                                                                                src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/02/testi-3.3.jpg"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/testi-3.3.jpg') }}" alt="">
                                                                         </div>
                                                                         <div class="details">
                                                                             <h5>Nickel Jhon</h5>
@@ -597,8 +575,7 @@
                             <div class=" widget text-widget">
                                 <div class="widget about-widget ">
                                     <div class="logo widget-title">
-                                        <img src="https://wpocean.com/wp/hostar/wp-content/uploads/2020/02/tr-logo.png"
-                                            alt="">
+                                        <img src="{{ asset('images/tr-logo.png') }}" alt="">
                                     </div>
                                     <p>High Quality Hosting WordPress Theme in Envato Market. We offer Best Web Hosting
                                         &amp; Domain.</p>
