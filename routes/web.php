@@ -18,6 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/account-sign-in', function () {
+    return view('registration');
+})->name('regview');
+
+
 Route::prefix('/about')->group(function () {
     Route::controller(AboutController::class)->group(function (){
         Route::get('/', 'index')->name('about');

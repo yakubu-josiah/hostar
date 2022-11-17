@@ -716,7 +716,7 @@
                                                                 with Hostar Now Limited time also customer support
                                                                 responses are fast. </p>
                                                             <div class="btns-wpo-cta">
-                                                                <a href="https://wpocean.com/wp/hostar/my-account/"
+                                                                <a href="{{ route('regview') }}"
                                                                     class="theme-btn-s4">Creat Your Account</a>
                                                             </div>
                                                         </div>
