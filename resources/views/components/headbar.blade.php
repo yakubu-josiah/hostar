@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="wpo-site-logo  has_menu " style="">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{ route('home') }}">
                         <img src="{{ asset('images/tr-logo.png') }}"
                         alt="Hostar - Web Hosting">
                     </a>
