@@ -53,7 +53,7 @@
                                                                         </div>
                                                                         <div class="btns">
                                                                             <a href="{{ route('hosting') }}" class="theme-btn">Get Started</a>
-                                                                            <a href="https://wpocean.com/wp/hostar/contact/" class="theme-btn-s2">Know More</a>
+                                                                            <a href="{{ route('contact') }}" class="theme-btn-s2">Know More</a>
                                                                         </div>
                                                                     </div>
                                                                 </div>

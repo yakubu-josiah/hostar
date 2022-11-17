@@ -81,7 +81,7 @@
                             </li>
                             <li id="menu-item-302"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-302">
-                                <a href="https://wpocean.com/wp/hostar/contact/">Contact</a>
+                                <a href="{{ route('contact') }}">Contact</a>
                             </li>
                             <li id="menu-item-305"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-305">
@@ -141,7 +141,7 @@
                     </li>
                     <li id="menu-item-30"
                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a
-                            href="https://wpocean.com/wp/hostar/contact/">Contact</a></li>
+                            href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </div><!-- end of nav-collapse -->
             <div class="wpo-cart-search-contact">

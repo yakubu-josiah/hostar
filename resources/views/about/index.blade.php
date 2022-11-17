@@ -499,7 +499,7 @@
                                         <li><a href="{{ route('hosting') }}">Our Services</a></li>
                                         <li><a href="https://wpocean.com/wp/hostar/pricing/">Our Pricing</a></li>
                                         <li><a href="https://wpocean.com/wp/hostar/blog/">Latest News</a></li>
-                                        <li><a href="https://wpocean.com/wp/hostar/contact/">Contact Us</a></li>
+                                        <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                                 <div class="clear"></div>
