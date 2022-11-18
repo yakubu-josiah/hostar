@@ -49,7 +49,7 @@
     <nav class="pcoded-navbar">
         <div class="navbar-wrapper">
             <div class="navbar-brand header-logo">
-                <a href="#" class="b-brand">
+                <a href="{{ route('home')}}" class="b-brand">
                     <div class="b-bg">
                         <img class="b-brand b-bg" src="{{ asset('images/tr-logo.png') }}" alt="">
                     </div>
@@ -141,7 +141,7 @@
     <header class="navbar pcoded-header navbar-expand-lg navbar-light">
         <div class="m-header">
             <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
-            <a href="#" class="b-brand">
+            <a href="{{ route('home')}}"  class="b-brand">
                 <div class="b-bg">
                     <img class="b-brand b-bg" src="{{ asset('images/tr-logo.png') }}" alt="">
                 </div>
