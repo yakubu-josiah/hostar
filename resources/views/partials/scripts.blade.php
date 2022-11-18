@@ -54,6 +54,29 @@ var wpcf7 = {"api":{"root":"https:\/\/wpocean.com\/wp\/hostar\/wp-json\/","names
 <script type='text/javascript' src="{{ asset('js/jquery/jquery.validate.min.js') }}" id='hostar-validate-js'></script>
 <script type='text/javascript' src="{{ asset('js/regenerator-runtime.min.js') }}" id='regenerator-runtime-js'></script>
 <script type='text/javascript' src="{{ asset('js/wp-polyfill.min.js') }}" id='wp-polyfill-js'></script>
+<script type='text/javascript' src="{{ asset('js/cart-frontend.js') }}" id='cart-frontend-js'></script>
+<script type='text/javascript' src="{{ asset('js/lodash.min.js') }}" id='lodash-js'></script>
+<script type='text/javascript' src="{{ asset('js/react.min.js') }}" id='react-js'></script>
+<script type='text/javascript' src="{{ asset('js/blocks-checkout.js') }}" id='blocks-checkout-js'></script>
+<script type='text/javascript' src="{{ asset('js/wc-blocks-registry.js') }}" id='wp-blocks-registry-js'></script>
+<script type='text/javascript' src="{{ asset('js/escape-html.min.js') }}" id='escape-html-js'></script>
+<script type='text/javascript' src="{{ asset('js/is-shallow-equal.min.js') }}" id='is-shallow-equal-js'></script>
+<script type='text/javascript' src="{{ asset('js/priority-queue.min.js') }}" id='priority-queue-js'></script>
+<script type='text/javascript' src="{{ asset('js/redux-routine.min.js') }}" id='redux-routine-js'></script>
+<script type='text/javascript' src="{{ asset('js/data.min.js') }}" id='data-js'></script>
+<script type='text/javascript' src="{{ asset('js/compose.min.js') }}" id='compose-js'></script>
+<script type='text/javascript' src="{{ asset('js/deprecated.min.js') }}" id='deprecated-js'></script>
+<script type='text/javascript' src="{{ asset('js/hooks.min.js') }}" id='hooks-js'></script>
+<script type='text/javascript' src="{{ asset('js/element.min.js') }}" id='element-js'></script>
+<script type='text/javascript' src="{{ asset('js/dom.min.js') }}" id='dom-js'></script>
+<script type='text/javascript' src="{{ asset('js/api-fetch.min.js') }}" id='api-fetch-js'></script>
+<script type='text/javascript' src="{{ asset('js/wc-settings.js') }}" id='wc-settings-js'></script>
+<script type='text/javascript' src="{{ asset('js/react-dom.min.js') }}" id='react-dom-js'></script>
+<script type='text/javascript' src="{{ asset('js/keycodes.min.js') }}" id='keycodes-js'></script>
+<script type='text/javascript' src="{{ asset('js/i18n.min.js') }}" id='i18n-js'></script>
+<script type='text/javascript' src="{{ asset('js/url.min.js') }}" id='url-js'></script>
+
+
 <script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
     /* <![CDATA[ */
     var wpcf7_recaptcha = {"sitekey":"6LeqIUYgAAAAABqyScypouxuLGm-ae0cEnKamFCe","actions":{"homepage":"homepage","contactform":"contactform"}};
