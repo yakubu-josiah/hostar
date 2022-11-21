@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HostingController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,5 +49,12 @@ Route::prefix('/contact')->group(function (){
 Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
         Route::get('/dashboard', 'dashboard')->name('adminDash');
+    });
+});
+
+Route::prefix('/shop')->group(function (){
+    Route::controller(ShopController::class)->group(function (){
+        Route::get('/', 'index')->name('shop');
+        Route::get('/order-listings', 'single')->name('single');
     });
 });

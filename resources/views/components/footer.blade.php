@@ -32,11 +32,11 @@
                             </div>
                             <div class="textwidget custom-html-widget">
                                 <ul>
-                                    <li><a href="#">WordPress Hosting</a></li>
-                                    <li><a href="#">Cloud Hosting</a></li>
-                                    <li><a href="#">Shared Hosting</a></li>
-                                    <li><a href="#">VPS Hosting</a></li>
-                                    <li><a href="#">Dedicated Hosting</a></li>
+                                    <li><a href="{{ route('services') }}">WordPress Hosting</a></li>
+                                    <li><a href="{{ route('services') }}">Cloud Hosting</a></li>
+                                    <li><a href="{{ route('services') }}">Shared Hosting</a></li>
+                                    <li><a href="{{ route('services') }}">VPS Hosting</a></li>
+                                    <li><a href="{{ route('services') }}">Dedicated Hosting</a></li>
                                 </ul>
                             </div>
                             <div class="clear"></div>
@@ -51,8 +51,8 @@
                                 <ul>
                                     <li><a href="{{ route('about') }}">About Us</a></li>
                                     <li><a href="{{ route('services') }}">Our Services</a></li>
-                                    <li><a href="https://wpocean.com/wp/hostar/pricing/">Our Pricing</a></li>
-                                    <li><a href="https://wpocean.com/wp/hostar/blog/">Latest News</a></li>
+                                    <li><a href="#">Our Pricing</a></li>
+                                    <li><a href="#">Latest News</a></li>
                                     <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                 </ul>
                             </div>

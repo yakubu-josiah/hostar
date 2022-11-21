@@ -172,9 +172,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="wpo-features-img">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/feature-1.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/feature-1.png') }}" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -189,13 +187,12 @@
                                                                                 <p>Getting your website live is as
                                                                                     simple as a click of a button.
                                                                                     Everything you need - provided in a
-                                                                                    clear way.</p>
+                                                                                    clear way.
+                                                                                </p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="wpo-features-img">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/feature-2.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/feature-2.png') }}" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -210,13 +207,12 @@
                                                                                 <p>Getting your website live is as
                                                                                     simple as a click of a button.
                                                                                     Everything you need - provided in a
-                                                                                    clear way.</p>
+                                                                                    clear way.
+                                                                                </p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="wpo-features-img">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/feature-3.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/feature-3.png') }}" alt="">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -249,7 +245,8 @@
                                                         <div class="section-title">
                                                             <h2>Our Pricing Plan</h2>
                                                             <p>Start saving today.If you are not happy with our services
-                                                                for whatever reason, we'll refund your payment.</p>
+                                                                for whatever reason, we'll refund your payment.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -290,9 +287,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}"
-                                                                                    class="wpo-pricing-btn ">Started
-                                                                                    Now</a>
+                                                                                <a href="{{ route('services') }}"class="wpo-pricing-btn ">Started Now</a>
                                                                                 <div class="shape-1"></div>
                                                                                 <div class="shape-2"></div>
                                                                                 <div class="shape-3"></div>
@@ -315,9 +310,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}"
-                                                                                    class="wpo-pricing-btn ">Started
-                                                                                    Now</a>
+                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn ">Started Now</a>
                                                                                 <div class="shape-1"></div>
                                                                                 <div class="shape-2"></div>
                                                                                 <div class="shape-3"></div>
@@ -340,9 +333,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}"
-                                                                                    class="wpo-pricing-btn ">Started
-                                                                                    Now</a>
+                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn ">Started Now</a>
                                                                                 <div class="shape-1"></div>
                                                                                 <div class="shape-2"></div>
                                                                                 <div class="shape-3"></div>
@@ -369,9 +360,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}"
-                                                                                    class="wpo-pricing-btn">Chose Plan
-                                                                                    Now</a>
+                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn">Chose Plan Now </a>
                                                                             </div>
                                                                         </div>
                                                                         <div
@@ -389,9 +378,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}"
-                                                                                    class="wpo-pricing-btn">Chose Plan
-                                                                                    Now</a>
+                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn"> Chose Plan Now </a>
                                                                             </div>
                                                                         </div>
                                                                         <div
@@ -409,9 +396,7 @@
                                                                                         <li>Unlimited Support</li>
                                                                                     </ul>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}"
-                                                                                    class="wpo-pricing-btn">Chose Plan
-                                                                                    Now</a>
+                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn"> Chose Plan Now </a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -461,102 +446,84 @@
                                                                 <div class="col-lg-4 col-sm-6 col-12 custom-grid">
                                                                     <div class="wpo-service-item">
                                                                         <div class="wpo-service-icon">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/server.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/server.png') }}" alt="">
                                                                         </div>
                                                                         <div class="wpo-service-text">
-                                                                            <h2><a
-                                                                                    href="{{ route('services') }}">WordPress
-                                                                                    Hosting</a></h2>
+                                                                            <h2><a href="{{ route('services') }}">WordPress Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
-                                                                                website or web page.</p>
+                                                                                website or web page.
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4 col-sm-6 col-12 custom-grid">
                                                                     <div class="wpo-service-item">
                                                                         <div class="wpo-service-icon">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/refresh.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/refresh.png') }}" alt="">
                                                                         </div>
                                                                         <div class="wpo-service-text">
-                                                                            <h2><a
-                                                                                    href="{{ route('services') }}">Dedicated
-                                                                                    Hosting</a></h2>
+                                                                            <h2><a href="{{ route('services') }}">Dedicated Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
-                                                                                website or web page.</p>
+                                                                                website or web page.
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4 col-sm-6 col-12 custom-grid">
                                                                     <div class="wpo-service-item">
                                                                         <div class="wpo-service-icon">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/database.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/database.png') }}" alt="">
                                                                         </div>
                                                                         <div class="wpo-service-text">
-                                                                            <h2><a
-                                                                                    href="{{ route('services') }}">Reseller
-                                                                                    Hosting</a></h2>
+                                                                            <h2><a href="{{ route('services') }}">Reseller Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
-                                                                                website or web page.</p>
+                                                                                website or web page.
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4 col-sm-6 col-12 custom-grid">
                                                                     <div class="wpo-service-item">
                                                                         <div class="wpo-service-icon">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/web.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/web.png') }}" alt="">
                                                                         </div>
                                                                         <div class="wpo-service-text">
-                                                                            <h2><a
-                                                                                    href="{{ route('services') }}">Cloud
-                                                                                    Hosting</a></h2>
+                                                                            <h2><a href="{{ route('services') }}">Cloud Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
-                                                                                website or web page.</p>
+                                                                                website or web page.
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4 col-sm-6 col-12 custom-grid">
                                                                     <div class="wpo-service-item">
                                                                         <div class="wpo-service-icon">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/technology.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/technology.png') }}" alt="">
                                                                         </div>
                                                                         <div class="wpo-service-text">
-                                                                            <h2><a
-                                                                                    href="{{ route('services') }}">VPS
-                                                                                    Hosting</a></h2>
+                                                                            <h2><a href="{{ route('services') }}">VPS Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
-                                                                                website or web page.</p>
+                                                                                website or web page.
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-4 col-sm-6 col-12 custom-grid">
                                                                     <div class="wpo-service-item">
                                                                         <div class="wpo-service-icon">
-                                                                            <img decoding="async"
-                                                                                src="{{ asset('images/server-1.png') }}"
-                                                                                alt="">
+                                                                            <img decoding="async" src="{{ asset('images/server-1.png') }}" alt="">
                                                                         </div>
                                                                         <div class="wpo-service-text">
-                                                                            <h2><a
-                                                                                    href="{{ route('services') }}">Shared
-                                                                                    Hosting</a></h2>
+                                                                            <h2><a href="{{ route('services') }}">Shared Hosting</a></h2>
                                                                             <p>Web hosting is a service that allows
                                                                                 organizations and individuals to post a
-                                                                                website or web page.</p>
+                                                                                website or web page.
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -688,13 +655,12 @@
                                                                             <p>Awesome theme, easy to use. Should there
                                                                                 be any problem, the customer support
                                                                                 responses are fast and very helpful
-                                                                                support.</p>
+                                                                                support.
+                                                                            </p>
                                                                         </div>
                                                                         <div class="client-info">
                                                                             <div class="img-holder">
-                                                                                <img decoding="async"
-                                                                                    src="{{ asset('images/testi-3.3.jpg') }}"
-                                                                                    alt="">
+                                                                                <img decoding="async" src="{{ asset('images/testi-3.3.jpg') }}" alt="">
                                                                             </div>
                                                                             <div class="details">
                                                                                 <h5>Nickel Jhon</h5>
@@ -733,7 +699,6 @@
                                                             <h2>Latest News </h2>
                                                             <p>If you are not happy with our services for whatever
                                                                 reason, we'll refund your payment. No hassle, no risk.
-
                                                             </p>
                                                         </div>
                                                     </div>
@@ -749,31 +714,21 @@
                                                         <div class="blog-grids">
                                                             <div class="grid">
                                                                 <div class="entry-media">
-                                                                    <img decoding="async"
-                                                                        src="{{ asset('images/grid-1-1.jpg') }}"
-                                                                        alt="">
-                                                                    <div class="date">
-                                                                        <p>Jan<span>09</span></p>
-                                                                    </div>
+                                                                    <img decoding="async" src="{{ asset('images/grid-1-1.jpg') }}" alt="">
+                                                                    <div class="date"> <p>Jan<span>09</span></p> </div>
                                                                 </div>
                                                                 <div class="entry-details">
-                                                                    <h3><a
-                                                                            href="https://wpocean.com/wp/hostar/improving-website-performance-with-litespeed/">Improving
-                                                                            Website Performance with LiteSpeed</a></h3>
+                                                                    <h3><a href="#">Improving Website Performance with LiteSpeed</a></h3>
                                                                     <div class="entry-meta clearfix">
                                                                         <ul>
                                                                             <li>
                                                                                 <i class="ti-user"></i>
                                                                                 By: <a
-                                                                                    href="https://wpocean.com/wp/hostar/author/developer/"
+                                                                                    href="#"
                                                                                     rel="author">Developer</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a class="hostar-comment"
-                                                                                    href="https://wpocean.com/wp/hostar/improving-website-performance-with-litespeed/#respond">
-                                                                                    <i class="ti-comment-alt"></i>
-                                                                                    Comments (<span
-                                                                                        class="comment">0</span>) </a>
+                                                                                <a class="hostar-comment" href="#"> <i class="ti-comment-alt"></i> Comments (<span class="comment">0</span>) </a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -781,32 +736,21 @@
                                                             </div>
                                                             <div class="grid">
                                                                 <div class="entry-media">
-                                                                    <img decoding="async"
-                                                                        src="{{ asset('images/grid-2-1.jpg') }}"
-                                                                        alt="">
-                                                                    <div class="date">
-                                                                        <p>Jan<span>09</span></p>
-                                                                    </div>
+                                                                    <img decoding="async" src="{{ asset('images/grid-2-1.jpg') }}" alt="">
+                                                                    <div class="date"> <p>Jan<span>09</span></p> </div>
                                                                 </div>
                                                                 <div class="entry-details">
-                                                                    <h3><a
-                                                                            href="https://wpocean.com/wp/hostar/the-definitive-list-of-digital-products-you-can-sell/">The
-                                                                            definitive list of digital products you can
-                                                                            sell</a></h3>
+                                                                    <h3><a href="#">The definitive list of digital products you can sell</a></h3>
                                                                     <div class="entry-meta clearfix">
                                                                         <ul>
                                                                             <li>
                                                                                 <i class="ti-user"></i>
                                                                                 By: <a
-                                                                                    href="https://wpocean.com/wp/hostar/author/developer/"
+                                                                                    href="#"
                                                                                     rel="author">Developer</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a class="hostar-comment"
-                                                                                    href="https://wpocean.com/wp/hostar/the-definitive-list-of-digital-products-you-can-sell/#respond">
-                                                                                    <i class="ti-comment-alt"></i>
-                                                                                    Comments (<span
-                                                                                        class="comment">0</span>) </a>
+                                                                                <a class="hostar-comment" href="#"> <i class="ti-comment-alt"></i> Comments (<span class="comment">0</span>) </a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -814,32 +758,19 @@
                                                             </div>
                                                             <div class="grid">
                                                                 <div class="entry-media">
-                                                                    <img decoding="async"
-                                                                        src="{{ asset('images/grid-3-1.jpg') }}"
-                                                                        alt="">
-                                                                    <div class="date">
-                                                                        <p>Jan<span>09</span></p>
-                                                                    </div>
+                                                                    <img decoding="async" src="{{ asset('images/grid-3-1.jpg') }}" alt="">
+                                                                    <div class="date"> <p>Jan<span>09</span></p> </div>
                                                                 </div>
                                                                 <div class="entry-details">
-                                                                    <h3><a
-                                                                            href="https://wpocean.com/wp/hostar/25-best-hosting-compani-all-over-the-world/">25
-                                                                            Best Hosting Compani All Over the World</a>
-                                                                    </h3>
+                                                                    <h3><a href="#">25 Best Hosting Compani All Over the World</a> </h3>
                                                                     <div class="entry-meta clearfix">
                                                                         <ul>
                                                                             <li>
                                                                                 <i class="ti-user"></i>
-                                                                                By: <a
-                                                                                    href="https://wpocean.com/wp/hostar/author/developer/"
-                                                                                    rel="author">Developer</a>
+                                                                                By: <a href="#" rel="author">Developer</a>
                                                                             </li>
                                                                             <li>
-                                                                                <a class="hostar-comment"
-                                                                                    href="https://wpocean.com/wp/hostar/25-best-hosting-compani-all-over-the-world/#respond">
-                                                                                    <i class="ti-comment-alt"></i>
-                                                                                    Comments (<span
-                                                                                        class="comment">0</span>) </a>
+                                                                                <a class="hostar-comment" href="#"> <i class="ti-comment-alt"></i> Comments (<span class="comment">0</span>) </a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
