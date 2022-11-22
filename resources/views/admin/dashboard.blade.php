@@ -1,51 +1,7 @@
-<html lang="en">
+@extends('partials.admin.layout')
+@section('title', 'Admin - Dashboard')
 
-<head>
-    <title>My Coin Auction - Your Dashboard</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-
-    <!-- fontawesome icon -->
-    <link rel="stylesheet" href="{{ asset('css/admin-font.css') }}">
-    <!-- animation css -->
-    <link rel="stylesheet" href="{{ asset('css/admin-animate.css') }}">
-    <!-- vendor css -->
-
-    <link href="{{ asset('css/admin-style.css') }}" rel="stylesheet">
-
-    <style>
-        .fixed-button.active {
-            bottom: 50px;
-            opacity: 1;
-            visibility: hidden;
-        }
-
-
-        .fixed-button {
-            bottom: 50px;
-            opacity: 1;
-            visibility: hidden;
-        }
-    </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGZW11GB1G"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-NGZW11GB1G');
-        // 
-    </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-</head>
-
-<body>
+@section('content')
     <nav class="pcoded-navbar">
         <div class="navbar-wrapper">
             <div class="navbar-brand header-logo">
@@ -185,44 +141,117 @@
                                 <div class="col-md-12 col-xl-4">
                                     <div class="card yearly-sales">
                                         <div class="card-block">
-                                            <h6 class="mb-4">Components</h6>
+                                            <h4 class="mb-4">Homepage Components</h4>
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-9">
-                                                    <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i
-                                                            class="feather icon-arrow-right text-c-green f-30 m-r-10"></i>
-                                                        100
-                                                    </h3>
-                                                </div>
-                                                <div class="col-3 text-right">
-                                                    <p class="m-b-0">Add More</p>
+                                                    {{-- Elements start --}}
+                                                    <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                        <a href="#">
+                                            <div class="card-header">
+                                                <h5>Top Banner</h5>
+                                            </div>
+                                        </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                        <a href="#">
+                                            <div class="card-header">
+                                               <h5>Cards Features</h5>
+                                             </div>
+                                        </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                        <a href="#">
+                                            <div class="card-header">
+                                                <h5>Pricing Plans</h5>
+                                            </div>
+                                        </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                        <a href="#">
+                                            <div class="card-header">
+                                                <h5>Services</h5>
+                                            </div>
+                                        </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                        <a href="#">
+                                            <div class="card-header">
+                                                <h5>Promo</h5>
+                                            </div>
+                                        </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                       <a href="#">
+                                        <div class="card-header">
+                                           <h5>Testimonials</h5>
+                                        </div>
+                                       </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-8 col-md-4">
+                                    <div class="card Recent-Users">
+                                        <a href="#">
+                                            <div class="card-header">
+                                                <h5>Footer</h5>
+                                            </div>
+                                        </a>
+                                        <div class="card-block px-0 py-3">
+                                            <div class="table-responsive">
+                                                <p>Update and edit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {{-- Elements end --}}
+                                
                                                 </div>
                                             </div>
                                             <div class="progress m-t-30" style="height: 7px;">
                                                 <div class="progress-bar progress-c-theme" role="progressbar"
                                                     style="width: 100%;" aria-valuenow="70" aria-valuemin="0"
                                                     aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-xl-8 col-md-6">
-                                    <div class="card Recent-Users">
-                                        <div class="card-header">
-                                            <h5>Elements </h5>
-                                        </div>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <tbody>
-
-
-
-
-
-                                                    </tbody>
-                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -244,6 +273,4 @@
     <script src="{{ asset('js/admin-vendor.js') }}"></script>
     <script src="{{ asset('js/admin-bootstrap.js') }}"></script>
 
-</body>
-
-</html>
+@endsection
