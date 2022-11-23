@@ -13,7 +13,7 @@
                             <div class="row align-items-center">
                                 <div class="col-md-12">
                                     <div class="page-header-title">
-                                        <h5 class="m-b-10">The Admin Dashboard</h5>
+                                        <h2 class="m-b-10">The Admin Dashboard</h2>
                                     </div>
                                     <ul class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a>
@@ -35,114 +35,68 @@
                                             <h4 class="mb-4">Homepage Components</h4>
                                             <div class="row d-flex align-items-center">
                                                 <div class="col-9">
-                                                    {{-- Elements start --}}
-                                                    <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                        <a href="#">
-                                            <div class="card-header">
-                                                <h5>Top Banner</h5>
-                                            </div>
-                                        </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                        <a href="#">
-                                            <div class="card-header">
-                                               <h5>Cards Features</h5>
-                                             </div>
-                                        </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                        <a href="#">
-                                            <div class="card-header">
-                                                <h5>Pricing Plans</h5>
-                                            </div>
-                                        </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                        <a href="#">
-                                            <div class="card-header">
-                                                <h5>Services</h5>
-                                            </div>
-                                        </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                        <a href="#">
-                                            <div class="card-header">
-                                                <h5>Promo</h5>
-                                            </div>
-                                        </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                       <a href="#">
-                                        <div class="card-header">
-                                           <h5>Testimonials</h5>
-                                        </div>
-                                       </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-8 col-md-4">
-                                    <div class="card Recent-Users">
-                                        <a href="#">
-                                            <div class="card-header">
-                                                <h5>Footer</h5>
-                                            </div>
-                                        </a>
-                                        <div class="card-block px-0 py-3">
-                                            <div class="table-responsive">
-                                                <p>Update and edit.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                {{-- Elements end --}}
-                                
+                                                    {{-- ui elements --}}
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Top Banner</h5>
+                                                            </div>
+                                                        </a>  
+                                                    </x-admin.uiElement>
+
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Cards Features</h5>
+                                                            </div>
+                                                        </a>    
+                                                    </x-admin.uiElement>
+
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Pricing Plans</h5>
+                                                            </div>
+                                                        </a>    
+                                                    </x-admin.uiElement>
+
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Products</h5>
+                                                            </div>
+                                                        </a>    
+                                                    </x-admin.uiElement>
+                                                    
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Promo Page</h5>
+                                                            </div>
+                                                        </a>    
+                                                    </x-admin.uiElement>
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Testimonials</h5>
+                                                            </div>
+                                                        </a>    
+                                                    </x-admin.uiElement>
+                                                    <x-admin.uiElement>
+                                                        <a href="#">
+                                                            <div class="card-header">                                                  
+                                                                <h5>Footer Contact</h5>
+                                                            </div>
+                                                        </a>    
+                                                    </x-admin.uiElement>
+                            
+                                                    {{-- Elements end --}}
+                            
                                                 </div>
                                             </div>
                                             <div class="progress m-t-30" style="height: 7px;">
-                                                <div class="progress-bar progress-c-theme" role="progressbar"
-                                                    style="width: 100%;" aria-valuenow="70" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
+                                                <div class="progress-bar progress-c-theme" role="progressbar" style="width: 100%;"
+                                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </div>
