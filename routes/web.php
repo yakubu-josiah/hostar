@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HostingController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
@@ -18,13 +19,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
-
-Route::get('/account-sign-in', function () {
-    return view('registration');
-})->name('regview');
+Route::controller(HomeController::class)->group(function (){
+    Route::get('/', 'home')->name('home');
+    Route::get('/account-sign-in', 'regView')->name('regView');
+});
 
 
 Route::prefix('/about')->group(function () {
