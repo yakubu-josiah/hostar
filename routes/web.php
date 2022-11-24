@@ -47,6 +47,7 @@ Route::prefix('/contact')->group(function (){
 Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
         Route::get('/dashboard', 'dashboard')->name('adminDash');
+        Route::get('/overview/top-banner', 'banner')->name('banner');
     });
 });
 
@@ -56,7 +57,3 @@ Route::prefix('/shop')->group(function (){
         Route::get('/order-listings', 'single')->name('single');
     });
 });
-
-Route::get('/sis', function () {
-    return view('admin.homepage.topBanner');
-})->name('ban');

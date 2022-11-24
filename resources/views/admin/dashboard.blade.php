@@ -22,7 +22,7 @@
                         <div class="col-12">
                             {{-- ui elements --}}
                             <x-admin.uiElement>
-                                <a href="#">
+                                <a href="{{ route('banner')}}">
                                     <div class="card-header">                                                  
                                         <h5>Top Banner</h5>
                                     </div>
