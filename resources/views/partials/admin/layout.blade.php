@@ -13,8 +13,9 @@
     <!-- animation css -->
     <link rel="stylesheet" href="{{ asset('css/admin-animate.css') }}">
     <!-- vendor css -->
+    <link rel="stylesheet" href="{{ asset('css/admin-boot.css') }}">
 
-    <link href="{{ asset('css/admin-style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/admin-style.css') }}">
 
     <style>
         .fixed-button.active {

@@ -11,91 +11,72 @@
                             <div class="page-header-title">
                                 <h2 class="m-b-10">The Admin Dashboard</h2>
                             </div>
-                            <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a>
-                                </li>
-                                <li class="breadcrumb-item"><a href="javascript:">home of </a></li>
-                            </ul>
+                            <x-admin.nametag />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="main-body">
-                <div class="page-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 col-xl-4">
-                            <div class="card yearly-sales">
-                                <div class="card-block">
-                                    <h4 class="mb-4">Homepage Components</h4>
-                                    <div class="row d-flex align-items-center">
-                                        <div class="col-9">
-                                            {{-- ui elements --}}
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Top Banner</h5>
-                                                    </div>
-                                                </a>  
-                                            </x-admin.uiElement>
-
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Cards Features</h5>
-                                                    </div>
-                                                </a>    
-                                            </x-admin.uiElement>
-
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Pricing Plans</h5>
-                                                    </div>
-                                                </a>    
-                                            </x-admin.uiElement>
-
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Products</h5>
-                                                    </div>
-                                                </a>    
-                                            </x-admin.uiElement>
-                                            
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Promo Page</h5>
-                                                    </div>
-                                                </a>    
-                                            </x-admin.uiElement>
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Testimonials</h5>
-                                                    </div>
-                                                </a>    
-                                            </x-admin.uiElement>
-                                            <x-admin.uiElement>
-                                                <a href="#">
-                                                    <div class="card-header">                                                  
-                                                        <h5>Footer Contact</h5>
-                                                    </div>
-                                                </a>    
-                                            </x-admin.uiElement>                            
-                                        </div>
+                <x-admin.maincontent>
+                    <h4 class="mb-4">Homepage Components</h4>
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12">
+                            {{-- ui elements --}}
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Top Banner</h5>
                                     </div>
-                                    <div class="progress m-t-30" style="height: 7px;">
-                                        <div class="progress-bar progress-c-theme" role="progressbar" style="width: 100%;"
-                                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </a>  
+                            </x-admin.uiElement>
+
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Cards Features</h5>
                                     </div>
-                                </div>
-                            </div>
+                                </a>    
+                            </x-admin.uiElement>
+
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Pricing Plans</h5>
+                                    </div>
+                                </a>    
+                            </x-admin.uiElement>
+
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Products</h5>
+                                    </div>
+                                </a>    
+                            </x-admin.uiElement>
+                            
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Promo Page</h5>
+                                    </div>
+                                </a>    
+                            </x-admin.uiElement>
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Testimonials</h5>
+                                    </div>
+                                </a>    
+                            </x-admin.uiElement>
+                            <x-admin.uiElement>
+                                <a href="#">
+                                    <div class="card-header">                                                  
+                                        <h5>Footer Contact</h5>
+                                    </div>
+                                </a>    
+                            </x-admin.uiElement>                            
                         </div>
                     </div>
-
-                </div>
-            </div>
+                </x-admin.maincontent>                
         </x-admin.wrapper>
  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
