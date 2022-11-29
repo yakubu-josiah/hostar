@@ -1,4 +1,6 @@
-<header id="header" class="wpo-site-header header-style-1">
+@props(['banner'])
+
+<header id="header" class="wpo-site-header header-style-1" >
     <nav class="navigation  sticky-menu-on  navbar navbar-default">
         <!-- Navigation & Search -->
         <div class="container has-menu ">
@@ -11,7 +13,7 @@
                 </button>
                 <div class="wpo-site-logo  has_menu " style="">
                     <a class="navbar-brand" href="{{ route('home') }}">
-                        <img src="{{ asset('images/tr-logo.png') }}"
+                        <img src="{{ $banner->logo }}"
                         alt="Hostar - Web Hosting">
                     </a>
                 </div>

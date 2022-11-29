@@ -24,10 +24,10 @@ class topBanner extends FormRequest
     public function rules()
     {
         return [
-            'h2' => 'bail|required|max:250',
-            'p' => 'bail|required|max:500',
-            'logo' => 'bail|required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
-            'image' => 'bail|required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+            'h2' => 'max:250',
+            'p' => 'max:500',
+            'logo' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048'
         ];
     }
 }

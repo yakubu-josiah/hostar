@@ -32,7 +32,7 @@
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGZW11GB1G"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGZW11GB1G"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -41,7 +41,7 @@
             gtag('config', 'G-NGZW11GB1G');
         // 
     </script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
 
 </head>
 <body>

@@ -16,7 +16,7 @@
         </div>
         <!-- end preloader -->
 
-        <x-headbar />
+        <x-headbar :banner="$banner"/>
         <div data-elementor-type="wp-page" data-elementor-id="59" class="elementor elementor-59">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
@@ -42,14 +42,10 @@
                                                                 <div class="col col-lg-6 col-md-7">
                                                                     <div class="wpo-hero-text">
                                                                         <div class="wpo-hero-title">
-                                                                            <h2>Fast &amp; Secure best web hosting</h2>
+                                                                            <h2>{{ $banner->h2 }}</h2>
                                                                         </div>
                                                                         <div class="wpo-hero-para">
-                                                                            <p>Extremely fast &amp; secure website
-                                                                                hosting WordPress Theme. We offer Best
-                                                                                Web Hosting &amp; Domain.
-
-                                                                            </p>
+                                                                            <p>{{ $banner->p }}</p>
                                                                         </div>
                                                                         <div class="btns">
                                                                             <a href="{{ route('hosting') }}" class="theme-btn">Get Started</a>
@@ -59,15 +55,14 @@
                                                                 </div>
                                                             </div>
                                                         </div> <!-- end container -->
-                                                        <div class="right-vec"
-                                                            style="background-image: url( {{ asset('images/hero-2vec.png') }} );">
-                                                        </div>
+
+                                                        <div class="right-vec" style="background-image: url({{ $banner->image }});"> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>  
                             </div>
                         </div>
                     </section>
@@ -794,7 +789,7 @@
             </div>
         </div>
         <!-- Footer -->
-        <x-footer />
+        <x-footer :banner="$banner"/>
         <!-- Footer -->
     </div>
     @include('partials.scripts')

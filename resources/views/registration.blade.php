@@ -16,7 +16,7 @@
             </div>
         </div>
         <!-- end preloader -->
-        <x-headbar />
+        <x-headbar :banner="$banner"/>
 
         <!-- start wpo-page-title -->
         <section class="wpo-page-title   crumbs-area-6373cf3d8c21e " style="">

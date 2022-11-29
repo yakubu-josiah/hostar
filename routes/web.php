@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(HomeController::class)->group(function (){
     Route::get('/', 'home')->name('home');
-    Route::get('/account-sign-in', 'regView')->name('regView');
+    Route::get('/account-sign-in', 'regView')->name('regview');
 });
 
 
@@ -48,6 +48,8 @@ Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
         Route::get('/dashboard', 'dashboard')->name('adminDash');
         Route::get('/overview/top-banner', 'banner')->name('banner');
+        Route::post('/overview/top-banner/edit', 'bannerStore')->name('bannerStore');
+        Route::put('/overview/top-banner/update', 'bannerUpdate')->name('bannerUpdate');
     });
 });
 

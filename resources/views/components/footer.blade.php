@@ -1,3 +1,5 @@
+@props(['banner'])
+
 <footer class="wpo-site-footer">
     <!-- Footer Widgets -->
     <div class="upper-footer">
@@ -8,7 +10,7 @@
                         <div class=" widget text-widget">
                             <div class="widget about-widget ">
                                 <div class="logo widget-title">
-                                    <img src="{{ asset('images/tr-logo.png') }}"
+                                    <img src="{{ $banner->logo }}"
                                         alt="">
                                 </div>
                                 <p>High Quality Hosting WordPress Theme in Envato Market. We offer Best Web
