@@ -49,7 +49,7 @@ Route::prefix('/admin')->group(function (){
         Route::get('/dashboard', 'dashboard')->name('adminDash');
         Route::get('/overview/top-banner', 'banner')->name('banner');
         Route::post('/overview/top-banner/edit', 'bannerStore')->name('bannerStore');
-        Route::put('/overview/top-banner/update', 'bannerUpdate')->name('bannerUpdate');
+        Route::put('/overview/top-banner/edit/update', 'bannerUpdate')->name('bannerUpdate');
     });
 });
 

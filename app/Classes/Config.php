@@ -16,7 +16,7 @@ class Config
     }
 
     public static function isSecure() {
-        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']== 'on'){
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
             return 'on';
         } else {
             return 'off';
