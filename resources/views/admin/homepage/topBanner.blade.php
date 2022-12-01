@@ -7,7 +7,7 @@
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
             <p class="font-italic m-4 h4"> You can update this feature...</p>
-            <form action="{{ route('bannerUpdate') }}" method="POST"  enctype="multipart/form-data">
+            <form action="{{ route('bannerUpdate') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
                 @csrf
                 <div class="form-row mx-auto d-flex" >
                     <div class="col-5 m-auto">
@@ -19,12 +19,10 @@
                         <textarea rows="3"class="form-control" name="p" placeholder="Write here...">{{ old('p', optional($banner ?? null)->p) }}</textarea>
                     </div>
                 </div>
-                <div class="form-row mx-auto d-flex m-3" >
+                <div class="form-row mx-auto d-flex m-5">
                     <div class="col-5 m-auto">
                         <label for="logo" class="col form-label h4">Brand Logo</label>
                         <div style=' overflow:hidden;'>
-                           {{-- <img src="{{ asset($banner->logo) }}" width="300px" height="100px" id="upfile" style=" cursor:pointer;" onclick="getFile()"> --}}
-                           <img src="{{ $banner->logo }}" alt="Hostar - Web Hosting">
                             <input id="upfile" name="logo" type="file" value="{{ old('p', optional($banner ?? null)->logo) }}"/>
                         </div>
                     </div>
@@ -44,8 +42,8 @@
                         </script>
                     </div>                    
                 </div>
-                <div>
-                    <input type="submit" value="Add Changes" class="form-control btn btn-primary btn-block my-3 btn-lg">
+                <div style="margin-top: 50px; width: 100%; ">
+                    <input type="submit" value="Save Changes" class="btn  btn-primary" style="width: 35%; margin-left: 45px" >
                 </div>
             </form>
             
