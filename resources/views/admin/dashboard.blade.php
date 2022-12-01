@@ -22,15 +22,15 @@
                         <div class="col-12">
                             {{-- ui elements --}}
                             <x-admin.uiElement>
-                                <a href="{{ route('banner')}}">
+                                <a href="{{ route('banner') }}">
                                     <div class="card-header">                                                  
-                                        <h5>Top Banner</h5>
+                                        <h5>Top Banner</h5>                                        
                                     </div>
                                 </a>  
                             </x-admin.uiElement>
 
                             <x-admin.uiElement>
-                                <a href="#">
+                                <a href="{{ route('card') }}">
                                     <div class="card-header">                                                  
                                         <h5>Cards Features</h5>
                                     </div>

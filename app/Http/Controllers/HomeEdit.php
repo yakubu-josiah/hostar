@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Classes\FileUpload;
+use App\Http\Requests\CardValidator;
 use App\Http\Requests\topBanner;
+use App\Models\CardFeatures;
 use App\Models\topBanner as ModelsTopBanner;
 use Illuminate\Support\Str;
 
@@ -77,6 +79,27 @@ class HomeEdit extends Controller
             // $logo->move(public_path('images/'), $filemame);
             // $banner->image = $request->file('image')->getClientOriginalName();
             // $banner->logo = $request->file('logo')->getClientOriginalName();
+
+    }
+
+    public function cardEdit() {
+        return view('admin.homepage.cardFeatures', ['card' => CardFeatures::first()]);
+    }
+
+    public function cardStore(CardValidator $request) {
+        $validated = $request->validated();
+        CardFeatures::create($validated);
+
+        return redirect()->route('adminDash');
+    }
+
+    public function cardUpdate(CardValidator $request) {
+        $card = CardFeatures::first();
+        $validated = $request->validated();
+        $card->fill($validated);
+        $card->save();
+
+        return redirect()->route('adminDash');
 
     }
 }

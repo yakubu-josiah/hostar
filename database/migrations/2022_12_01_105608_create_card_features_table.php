@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('card_features', function (Blueprint $table) {
             $table->id();
-            $table->string('fst_h2');
-            $table->string('fst_p');
-            $table->string('scd_h2');
-            $table->string('scd_p');
-            $table->string('thd_h2');
-            $table->string('thd_p');
+            $table->string('fst_h2')->nullable();
+            $table->string('fst_p')->nullable();
+            $table->string('scd_h2')->nullable();
+            $table->string('scd_p')->nullable();
+            $table->string('thd_h2')->nullable();
+            $table->string('thd_p')->nullable();
             $table->timestamps();
         });
     }

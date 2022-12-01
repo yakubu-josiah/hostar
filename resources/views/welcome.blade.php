@@ -159,11 +159,8 @@
                                                                                 <i class='fi flaticon-startup'></i>
                                                                             </div>
                                                                             <div class="wpo-features-text">
-                                                                                <h2>Faster Loading Speed</h2>
-                                                                                <p>Getting your website live is as
-                                                                                    simple as a click of a button.
-                                                                                    Everything you need - provided in a
-                                                                                    clear way.</p>
+                                                                                <h2>{{ $card->fst_h2 }}</h2>
+                                                                                <p>{{ $card->fst_p }}</p>
                                                                             </div>
                                                                         </div>
                                                                         <div class="wpo-features-img">
@@ -178,11 +175,8 @@
                                                                                 <i class='fi flaticon-label'></i>
                                                                             </div>
                                                                             <div class="wpo-features-text">
-                                                                                <h2>99% Uptime Guarantee</h2>
-                                                                                <p>Getting your website live is as
-                                                                                    simple as a click of a button.
-                                                                                    Everything you need - provided in a
-                                                                                    clear way.
+                                                                                <h2>{{ $card->scd_h2 }}</h2>
+                                                                                <p>{{ $card->scd_p }}
                                                                                 </p>
                                                                             </div>
                                                                         </div>
@@ -198,11 +192,8 @@
                                                                                 <i class='fi flaticon-support'></i>
                                                                             </div>
                                                                             <div class="wpo-features-text">
-                                                                                <h2>24/7 Customer Support</h2>
-                                                                                <p>Getting your website live is as
-                                                                                    simple as a click of a button.
-                                                                                    Everything you need - provided in a
-                                                                                    clear way.
+                                                                                <h2>{{ $card->thd_h2 }}</h2>
+                                                                                <p>{{ $card->thd_p }}
                                                                                 </p>
                                                                             </div>
                                                                         </div>

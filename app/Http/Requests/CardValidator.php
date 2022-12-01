@@ -24,11 +24,11 @@ class CardValidator extends FormRequest
     public function rules()
     {
         return [
-            'fst_h2' => 'max:250',
+            'fst_h2' => 'max:40',
             'fst_p' => 'max:250',
-            'scd_h2' => 'max:250',
+            'scd_h2' => 'max:40',
             'scd_p' => 'max:250',
-            'thd_h2' => 'max:250',
+            'thd_h2' => 'max:40',
             'thd_p' => 'max:250'
         ];
     }

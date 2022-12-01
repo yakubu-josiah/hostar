@@ -51,11 +51,15 @@ Route::prefix('/admin')->group(function (){
         
     });
     Route::controller(HomeEdit::class)->group(function (){ 
-            // ----- TOP BANNER ------ //  
+                    // ----- TOP BANNER ------ //  
         Route::get('/overview/top-banner', 'bannerEdit')->name('banner');
         Route::post('/overview/top-banner/edit', 'bannerStore')->name('bannerStore');
         Route::put('/overview/top-banner/edit/update', 'bannerUpdate')->name('bannerUpdate');
 
+                    // ----- CARD FEATURES ------ //
+        Route::get('/overview/card-features', 'cardEdit')->name('card');
+        Route::post('/overview/card-features/edit', 'cardStore')->name('cardStore');
+        Route::put('/overview/card-features/edit/update', 'cardUpdate')->name('cardUpdate');  
 
     });
     
