@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeEdit;
 use App\Http\Controllers\HostingController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
@@ -47,10 +48,17 @@ Route::prefix('/contact')->group(function (){
 Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
         Route::get('/dashboard', 'dashboard')->name('adminDash');
-        Route::get('/overview/top-banner', 'banner')->name('banner');
+        
+    });
+    Route::controller(HomeEdit::class)->group(function (){ 
+            // ----- TOP BANNER ------ //  
+        Route::get('/overview/top-banner', 'bannerEdit')->name('banner');
         Route::post('/overview/top-banner/edit', 'bannerStore')->name('bannerStore');
         Route::put('/overview/top-banner/edit/update', 'bannerUpdate')->name('bannerUpdate');
+
+
     });
+    
 });
 
 Route::prefix('/shop')->group(function (){
