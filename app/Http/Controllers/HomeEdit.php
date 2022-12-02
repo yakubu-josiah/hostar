@@ -6,7 +6,9 @@ use App\Classes\FileUpload;
 use App\Http\Requests\CardValidator;
 use App\Http\Requests\topBanner;
 use App\Models\CardFeatures;
+use App\Models\PricingPlan;
 use App\Models\topBanner as ModelsTopBanner;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class HomeEdit extends Controller
@@ -100,6 +102,33 @@ class HomeEdit extends Controller
         $card->save();
 
         return redirect()->route('adminDash');
+    }
 
+    public function pricingEdit() {
+        return view('admin.homepage.pricingPlans', ['pricing' => PricingPlan::first()]);
+    }
+
+    public function pricingStore(Request $request) {
+        $validated = $request->validate([
+            'h2' => 'max:40',
+            'p' => 'max:250'
+        ]);
+        
+        PricingPlan::create($validated);
+
+        return redirect()->route('adminDash');
+    }
+
+    public function pricingUpdate(Request $request) {
+        $validated = $request->validate([
+            'h2' => 'max:40',
+            'p' => 'max:250'
+        ]);
+
+        $pricing = PricingPlan::first();
+        $pricing->fill($validated);
+        $pricing->save();
+
+        return redirect()->route('adminDash');
     }
 }

@@ -229,10 +229,8 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="col col-lg-12">
                                                         <div class="section-title">
-                                                            <h2>Our Pricing Plan</h2>
-                                                            <p>Start saving today.If you are not happy with our services
-                                                                for whatever reason, we'll refund your payment.
-                                                            </p>
+                                                            <h2>{{ $pricing->h2 }}</h2>
+                                                            <p>{{ $pricing->p }} </p>
                                                         </div>
                                                     </div>
                                                 </div>

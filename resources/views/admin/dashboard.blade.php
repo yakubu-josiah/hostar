@@ -38,7 +38,7 @@
                             </x-admin.uiElement>
 
                             <x-admin.uiElement>
-                                <a href="#">
+                                <a href="{{ route('pricing') }}">
                                     <div class="card-header">                                                  
                                         <h5>Pricing Plans</h5>
                                     </div>

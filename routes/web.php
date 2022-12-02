@@ -61,6 +61,11 @@ Route::prefix('/admin')->group(function (){
         Route::post('/overview/card-features/edit', 'cardStore')->name('cardStore');
         Route::put('/overview/card-features/edit/update', 'cardUpdate')->name('cardUpdate');  
 
+                    // ----- PRICING PLANS ------ //
+        Route::get('/overview/pricing-plans', 'pricingEdit')->name('pricing');
+        Route::post('/overview/pricing-plans/edit', 'pricingStore')->name('pricingStore');
+        Route::put('/overview/pricing-plans/edit/update', 'pricingUpdate')->name('pricingUpdate');
+
     });
     
 });
