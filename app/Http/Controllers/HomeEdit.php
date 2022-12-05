@@ -131,4 +131,16 @@ class HomeEdit extends Controller
 
         return redirect()->route('adminDash');
     }
+
+    public function packageEdit() {
+        return view('admin.homepage.packages.form');
+    }
+
+    public function packageStore() {
+
+    }
+
+    public function packageUpdate() {
+
+    }
 }

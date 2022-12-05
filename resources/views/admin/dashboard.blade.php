@@ -46,9 +46,9 @@
                             </x-admin.uiElement>
 
                             <x-admin.uiElement>
-                                <a href="#">
+                                <a href="{{ route('packages') }}">
                                     <div class="card-header">                                                  
-                                        <h5>Products</h5>
+                                        <h5>Packages</h5>
                                     </div>
                                 </a>    
                             </x-admin.uiElement>

@@ -245,10 +245,12 @@
                                                                 <div class="col-12">
                                                                     <div class="Pricing-header">
                                                                         <ul class="nav nav-tabs">
-                                                                            <li class="active"><a data-toggle="tab"
-                                                                                    href="#Monthly">Monthly</a></li>
-                                                                            <li><a data-toggle="tab"
-                                                                                    href="#Yearly">Yearly</a></li>
+                                                                            <li class="active">
+                                                                                <a data-toggle="tab" href="#Monthly">Monthly</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a data-toggle="tab" href="#Yearly">Yearly</a>
+                                                                            </li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>

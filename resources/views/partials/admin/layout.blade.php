@@ -8,6 +8,7 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 
+    <script src="{{ asset('css/1.12.4/jquery.min.js') }}"></script>
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="{{ asset('css/admin-font.css') }}">
     <!-- animation css -->

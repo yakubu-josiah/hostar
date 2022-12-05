@@ -66,6 +66,12 @@ Route::prefix('/admin')->group(function (){
         Route::post('/overview/pricing-plans/edit', 'pricingStore')->name('pricingStore');
         Route::put('/overview/pricing-plans/edit/update', 'pricingUpdate')->name('pricingUpdate');
 
+                    // ----- ALL PACKAGES ------ //
+        Route::get('/overview/hosting-packages', 'packageEdit')->name('packages');
+        Route::post('/overview/hosting-packages/edit', 'packageStore')->name('packageStore');
+        Route::put('/overview/hosting-packages/edit/update', 'packageUpdate')->name('packageUpdate');
+
+
     });
     
 });
