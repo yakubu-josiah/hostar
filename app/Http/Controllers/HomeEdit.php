@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Classes\FileUpload;
 use App\Http\Requests\CardValidator;
+use App\Http\Requests\PackageValidator;
 use App\Http\Requests\topBanner;
 use App\Models\CardFeatures;
+use App\Models\Packages;
 use App\Models\PricingPlan;
 use App\Models\topBanner as ModelsTopBanner;
 use Illuminate\Http\Request;
@@ -136,8 +138,12 @@ class HomeEdit extends Controller
         return view('admin.homepage.packages.form');
     }
 
-    public function packageStore() {
-
+    public function packageStore(PackageValidator $request) {
+        $validated = $request->validated();
+        $validated['sub_plan'] = json_encode($validated['sub_plan']);
+        Packages::create($validated);
+        
+        return redirect()->back();
     }
 
     public function packageUpdate() {

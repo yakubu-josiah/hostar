@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->enum('duration', ['yearly', 'monthly'])->nullable();
             $table->double('amount')->nullable();
-            $table->json('sub_plan')->nullable();
+            $table->text('sub_plan')->nullable();
             $table->timestamps();
         });
     }

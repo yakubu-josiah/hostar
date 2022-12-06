@@ -14,4 +14,14 @@ class Packages extends Model
         'sub_plan'
     ];
     use HasFactory;
+
+    public static function guestPackage($dura){
+        $resp = self::where('duration', $dura)->get();
+        if($resp){
+            foreach ($resp as $value) {
+                $value['sub_plan'] = json_decode($value->sub_plan);
+            }
+        }
+        return $resp;
+    }
 }

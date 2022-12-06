@@ -13,7 +13,7 @@ class PackageValidator extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class PackageValidator extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => 'bail|required|max:30',
+            'amount' => 'bail|required|numeric',
+            'sub_plan.*'  => 'bail|required|string|distinct|min:3'
         ];
     }
 }

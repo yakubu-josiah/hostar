@@ -7,6 +7,7 @@
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
             <form action="{{ route('packageStore') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+                @csrf
                 <div class="form-row mx-auto">
                     <div class="form-group col-md-3">
                       <label class="" for="inlineFormInput">Subscription Plan</label>
@@ -17,43 +18,32 @@
                         </select>
                     </div>
 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 mx-3">
                       <label class="" for="inlineFormInput">Package Name</label>
-                      <input type="text" name="title" class="form-control mb-2" id="inlineFormInput" placeholder="Jane Doe">
+                      <input type="text" name="title" class="form-control mb-2" id="inlineFormInput" placeholder="Cloud Hosting">
                     </div>
                     
                     <div class="form-group col-md-4">
-                      <label class="" for="inlineFormInputGroup">Package Price</label>
-                      <div class="input-group mb-2 d-flex">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text fs-3" style="font-size: 16px">$</div>
+                        <label class="" for="inlineFormInputGroup">Package Price</label>
+                        <div class="input-groupx d-flex">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" style="font-size: 16px">$</div>
+                            </div>
+                            <div> <input type="number" name="amount" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+                            </div>
                         </div>
-                        <div> <input type="number" name="amount" class="form-control" id="inlineFormInputGroup" placeholder="Amount"> </div>
-                      </div>
                     </div>
                      
-                </div>
-               
-                
-                {{-- <div class="form-row mx-auto d-flex" >                    
-                    <div class="col-auto mx-5">
-                        <label for="fst_h2" class="col form-label h4">Package Name</label>
-                        <textarea rows="3" class="form-control" name="title" placeholder="Write here..."></textarea>
-                    </div>
-                    <div class="col-auto mx-5">
-                        <label for="fst_p" class="col form-label h4">Package Price</label>
-                        <textarea rows="3"class="form-control" name="amount" placeholder="Write here..."></textarea>
-                    </div>                    
-                </div>   --}}
-                <table class="col mx-4 text-center mb-4" id="dynamic_field"> 
+                </div>                
+                <table class="col text-center mb-4" id="dynamic_field"> 
                     <th class="mx-auto ">Features on Package Option </th> 
                     <tr class="justify-content-between"> 
-                        <td class="mx-4"><textarea rows="2"class="form-control" name="name[]" placeholder="Add features..."></textarea></td> 
+                        <td class="mx-4"><textarea rows="2"class="form-control" name="sub_plan[]" placeholder="Add features..."></textarea></td> 
                             {{-- <input type="texta" name="name[]" placeholder="Add features " class="form-control table table-bordered name_list" />  --}}
-                        <td class=""><button type="button" name="add" id="add" class="btn btn-success mx-5">Add More</button></td>  
+                        <td class=""><button type="button" id="add" class="btn btn-success mx-5">Add More</button></td>  
                     </tr>  
                 </table>            
-                <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />  
+                <input type="submit" id="submit" class="btn btn-info" value="Submit" />  
             </form>  
             {{-- <div class="alert alert-danger print-error-msg" style="display:none">
                         <ul></ul>
@@ -73,7 +63,7 @@
             
                   $('#add').click(function(){  
                        i++;  
-                       $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td class="mx-4"><textarea rows="2"class="form-control mx-5" name="name[]" placeholder="More features here..."></textarea></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
+                       $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td class="mx-4"><textarea rows="2"class="form-control mt-3" name="sub_plan[]" placeholder="More features here..."></textarea></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
                   });  
             
             

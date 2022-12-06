@@ -258,19 +258,17 @@
                                                             <div class="tab-content">
                                                                 <div id="Monthly" class="tab-pane active">
                                                                     <div class="row">
-                                                                        <div
-                                                                            class="col-md-4 col-sm-6 col-12 custom-grid">
+                                                                        @foreach ($monthPack as $months)
+                                                                        <div class="col-md-4 col-sm-6 col-12 custom-grid">
                                                                             <div class="wpo-pricing-item">
-                                                                                <h3>Cloud Hosting</h3>
+                                                                                <h3>{{ ucwords($months->title) }}</h3>
 
-                                                                                <h2>$15.00<span>/Monthly</span></h2>
+                                                                                <h2>${{ number_format($months->amount) }}<span>/Monthly</span></h2>
                                                                                 <div class="wpo-pricing-list">
                                                                                     <ul>
-                                                                                        <li>10GB Space</li>
-                                                                                        <li>100% High Performence</li>
-                                                                                        <li>300GB SSD Disk</li>
-                                                                                        <li>5 Domain Hosted Support</li>
-                                                                                        <li>Unlimited Support</li>
+                                                                                        @foreach ($months->sub_plan as $item)   
+                                                                                        <li>{{ ucwords($item) }}</li>
+                                                                                        @endforeach
                                                                                     </ul>
                                                                                 </div>
                                                                                 <a href="{{ route('services') }}"class="wpo-pricing-btn ">Started Now</a>
@@ -281,7 +279,10 @@
                                                                                 <div class="shape-5"></div>
                                                                             </div>
                                                                         </div>
-                                                                        <div
+                                                                        @endforeach
+
+
+                                                                        {{-- <div
                                                                             class="col-md-4 col-sm-6 col-12 custom-grid">
                                                                             <div class="wpo-pricing-item">
                                                                                 <h3>VPS Hosting</h3>
@@ -326,7 +327,7 @@
                                                                                 <div class="shape-4"></div>
                                                                                 <div class="shape-5"></div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div> --}}
                                                                     </div>
                                                                 </div>
                                                                 <div id="Yearly" class="tab-pane">
