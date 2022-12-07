@@ -134,6 +134,17 @@ class HomeEdit extends Controller
         return redirect()->route('adminDash');
     }
 
+    public function packageIndex() {
+        $monthPack = Packages::guestPackage('monthly');
+        $yearPack = Packages::guestPackage('yearly');
+        return view('admin.homepage.packages.index', 
+        [
+            'package' => Packages::all(),
+            'month' => $monthPack,
+            'year' => $yearPack
+        ]);
+    }
+
     public function packageEdit() {
         return view('admin.homepage.packages.form');
     }
@@ -146,7 +157,12 @@ class HomeEdit extends Controller
         return redirect()->back();
     }
 
-    public function packageUpdate() {
+    public function packageUpdate(PackageValidator $request, $id) {
+        $validated = $request->validated();
+        $package = Packages::findOrFail($id);
+        $package->fill($validated);
+        $package->save();
 
+        return redirect()->back();
     }
 }

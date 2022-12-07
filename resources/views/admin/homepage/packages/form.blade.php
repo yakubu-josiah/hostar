@@ -6,7 +6,8 @@
     <x-admin.wrapper>
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
-            <form action="{{ route('packageStore') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+            <form action="{{ route('packageUpdate', [$package->id]) }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+                @method('PUT')
                 @csrf
                 <div class="form-row mx-auto">
                     <div class="form-group col-md-3">
