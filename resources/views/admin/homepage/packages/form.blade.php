@@ -6,7 +6,7 @@
     <x-admin.wrapper>
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
-            <form action="{{ route('packageUpdate', [$package->id]) }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+            <form action="{{ route('packageUpdate', [$month->id]) }}" method="POST" enctype="multipart/form-data" class="align-item-center">
                 @method('PUT')
                 @csrf
                 <div class="form-row mx-auto">
@@ -21,7 +21,7 @@
 
                     <div class="form-group col-md-4 mx-3">
                       <label class="" for="inlineFormInput">Package Name</label>
-                      <input type="text" name="title" class="form-control mb-2" id="inlineFormInput" placeholder="Cloud Hosting">
+                      <input type="text" name="title" class="form-control mb-2" id="inlineFormInput" placeholder="Cloud Hosting" value="{{ $month->title }}">
                     </div>
                     
                     <div class="form-group col-md-4">
@@ -30,7 +30,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="font-size: 16px">$</div>
                             </div>
-                            <div> <input type="number" name="amount" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+                            <div> <input type="number" name="amount" class="form-control" id="inlineFormInputGroup" placeholder="Amount" value="{{ $month->amount }}">
                             </div>
                         </div>
                     </div>
@@ -39,9 +39,14 @@
                 <table class="col text-center mb-4" id="dynamic_field"> 
                     <th class="mx-auto ">Features on Package Option </th> 
                     <tr class="justify-content-between"> 
-                        <td class="mx-4"><textarea rows="2"class="form-control" name="sub_plan[]" placeholder="Add features..."></textarea></td> 
+                        @foreach($month['sub_plan'] as $item)
+                        <td class="mx-4">
+                            <textarea rows="2"class="form-control" name="sub_plan[]" placeholder="Add features...">
+                                {{ $item }}
+                            </textarea>
                             {{-- <input type="texta" name="name[]" placeholder="Add features " class="form-control table table-bordered name_list" />  --}}
                         <td class=""><button type="button" id="add" class="btn btn-success mx-5">Add More</button></td>  
+                        @endforeach
                     </tr>  
                 </table>            
                 <input type="submit" id="submit" class="btn btn-info" value="Submit" />  

@@ -137,16 +137,26 @@ class HomeEdit extends Controller
     public function packageIndex() {
         $monthPack = Packages::guestPackage('monthly');
         $yearPack = Packages::guestPackage('yearly');
+
         return view('admin.homepage.packages.index', 
         [
-            'package' => Packages::all(),
             'month' => $monthPack,
             'year' => $yearPack
         ]);
     }
 
-    public function packageEdit() {
-        return view('admin.homepage.packages.form');
+    public function packageEdit($id) {
+        $monthPack = Packages::guestPackage('monthly');
+        $yearPack = Packages::guestPackage('yearly');
+        $id = Packages::guestPackage($id);
+
+        return view('admin.homepage.packages.form', 
+        [
+            // 'package' => Packages::findOrFail($id),
+            'id' => $id,
+            'month' => $monthPack,
+            'year' => $yearPack
+        ]);
     }
 
     public function packageStore(PackageValidator $request) {
@@ -162,6 +172,13 @@ class HomeEdit extends Controller
         $package = Packages::findOrFail($id);
         $package->fill($validated);
         $package->save();
+
+        return redirect()->back();
+    }
+
+    public function packageDestroy($id) {
+        $package = Packages::findOrFail($id);
+        $package->delete();
 
         return redirect()->back();
     }
