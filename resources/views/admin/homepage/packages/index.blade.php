@@ -7,6 +7,7 @@
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0">
             <div class="h3">
+                <a href="{{ route('packagesForm') }}">sdfghjk</a>
                 <h3 class="mb-4">List of All Available Packages</h3>
             </div>
             <div class="border border-info justify-content-center">

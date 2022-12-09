@@ -145,8 +145,12 @@ class HomeEdit extends Controller
         ]);
     }
 
-    public function packageEdit($id) {
-        return view('admin.homepage.packages.form', 
+    public function packageCreate() {
+        return view('admin.homepage.packages.form');
+    }
+
+    public function packageEdit($id) {      
+        return view('admin.homepage.packages.editform', 
         [
             'package' => Packages::find($id)
         ]);

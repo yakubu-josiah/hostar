@@ -1,12 +1,12 @@
 @extends('partials.admin.layout')
-@section('title', 'Admin - Edit Packages')
+@section('title', 'Admin - Update Package')
 
 @section('content')
     <x-admin.dashboard />
     <x-admin.wrapper>
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
-            <form action="{{ route('packageStore') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+            <form action="{{ route('packageUpdate', [$package->id]) }}" method="POST" enctype="multipart/form-data" class="align-item-center">
                 @method('PUT')
                 @csrf
                 <div class="form-row mx-auto">
@@ -14,14 +14,14 @@
                       <label class="" for="inlineFormInput">Subscription Plan</label>
                         <select name="duration" id="duration" class="form-select p-2">
                             <option selected>Choose subscription plan</option>
-                            <option value="monthly" class="badge bg-secondary  text-wrap">Monthly</option>
-                            <option value="yearly" class="badge bg-secondary  text-wrap">Yearly</option>
+                            <option value="monthly" @if($package->duration == 'monthly') selected @endif class="badge bg-secondary  text-wrap">Monthly</option>
+                            <option value="yearly" @if($package->duration == 'yearly') selected @endif class="badge bg-secondary  text-wrap">Yearly</option>
                         </select>
                     </div>
 
                     <div class="form-group col-md-4 mx-3">
-                      <label class="" for="inlineFormInput">Package Name</label>
-                      <input type="text" name="title" class="form-control mb-2" id="inlineFormInput" placeholder="Cloud Hosting">
+                      <label c  lass="" for="inlineFormInput">Package Name</label>
+                      <input type="text" name="title" class="form-control mb-2" id="inlineFormInput" placeholder="Cloud Hosting" value="{{ $package->title }}">
                     </div>
                     
                     <div class="form-group col-md-4">
@@ -30,7 +30,7 @@
                             <div class="input-group-prepend">
                                 <div class="input-group-text" style="font-size: 16px">$</div>
                             </div>
-                            <div> <input type="number" name="amount" class="form-control" id="inlineFormInputGroup" placeholder="Amount">
+                            <div> <input type="number" name="amount" class="form-control" id="inlineFormInputGroup" placeholder="Amount" value="{{ $package->amount }}">
                             </div>
                         </div>
                     </div>
@@ -38,11 +38,14 @@
                 </div>                
                 <table class="col text-center mb-4" id="dynamic_field"> 
                     <th class="mx-auto ">Features on Package Option </th> 
-                    <tr class="justify-content-between"> 
-                        <td class="mx-4"><textarea rows="2"class="form-control" name="sub_plan[]" placeholder="Add features..."></textarea></td> 
-                            {{-- <input type="texta" name="name[]" placeholder="Add features " class="form-control table table-bordered name_list" />  --}}
-                        <td class=""><button type="button" id="add" class="btn btn-success mx-5">Add More</button></td>  
-                    </tr>  
+                    <td class=""><button type="button" id="add" class="btn btn-success mx-5">Add More</button></td>  
+                    @foreach(json_decode($package->sub_plan) as $item)
+                    <tr class="justify-content-between mb-3"> 
+                        <td class="mx-4 mb-3">
+                            <textarea id="add" rows="2"class="form-control" name="sub_plan[]" placeholder="Add features..." class="mb-3">{{ $item }}</textarea>
+                        </td>                        
+                    </tr>
+                    @endforeach
                 </table>            
                 <input type="submit" id="submit" class="btn btn-info" value="Submit" />  
             </form>  
@@ -60,12 +63,17 @@
                 $(document).ready(function(){      
                   var postURL = "<?php echo url('addmore'); ?>";
                   var i=1;  
-            
+                    
             
                   $('#add').click(function(){  
                        i++;  
                        $('#dynamic_field').append('<tr id="row'+i+'" class="dynamic-added"><td class="mx-4"><textarea rows="2"class="form-control mt-3" name="sub_plan[]" placeholder="More features here..."></textarea></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');  
-                  });  
+                  }); 
+                  
+                  $(document).('#add', function(){
+                    var button_id = $(this).attr("id");   
+                    $('#row'+button_id+'').remove(); 
+                  })
             
             
                   $(document).on('click', '.btn_remove', function(){  
