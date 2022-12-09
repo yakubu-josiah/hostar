@@ -146,16 +146,9 @@ class HomeEdit extends Controller
     }
 
     public function packageEdit($id) {
-        $monthPack = Packages::guestPackage('monthly');
-        $yearPack = Packages::guestPackage('yearly');
-        $id = Packages::guestPackage($id);
-
         return view('admin.homepage.packages.form', 
         [
-            // 'package' => Packages::findOrFail($id),
-            'id' => $id,
-            'month' => $monthPack,
-            'year' => $yearPack
+            'package' => Packages::find($id)
         ]);
     }
 
