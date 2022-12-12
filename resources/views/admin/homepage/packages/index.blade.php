@@ -12,13 +12,13 @@
             </div>
             <div class="border border-info justify-content-center">
                 <h5 class="text-center my-5 text-muted">All Monthly Packages</h5>
-                <div class="row mx-auto px-3 ">
+                <div class="row mx-auto px-2 ">
                     @foreach ($month as $months)
                     <div class="card col-md-4 col-sm-6 col-12 border border-info custom-grid mx-auto"
                         style="background-color:#cdd2d6">
                         <h4 class="card-header mx-0">{{ ucwords($months->title) }}</h4>
                         <div class="card-body pt-0">
-                            <p class="text-success "><i>This package was added: {{ $months->created_at }}</i></p>
+                            <p class="text-right"><i>This package was last updated at: <span class="text-success ">{{ $months->created_at }}</span></i></p>
                             @if (now()->diffInMinutes($months->created_at) < 5) <div class="alert alert-info">New Post!!
                             @endif
                             <h4><span> Package Price: $</span>{{ number_format($months->amount) }}</h4>

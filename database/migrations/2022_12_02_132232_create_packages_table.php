@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->enum('duration', ['yearly', 'monthly'])->nullable();
-            $table->double('amount')->nullable();
+            $table->float('amount')->nullable();
             $table->text('sub_plan')->nullable();
             $table->timestamps();
         });
