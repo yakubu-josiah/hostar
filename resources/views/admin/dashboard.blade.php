@@ -56,7 +56,7 @@
                             <x-admin.uiElement>
                                 <a href="#">
                                     <div class="card-header">                                                  
-                                        <h5>Promo Page</h5>
+                                        <h5>Services Offered</h5>
                                     </div>
                                 </a>    
                             </x-admin.uiElement>
