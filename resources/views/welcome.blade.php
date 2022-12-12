@@ -280,112 +280,27 @@
                                                                             </div>
                                                                         </div>
                                                                         @endforeach
-
-
-                                                                        {{-- <div
-                                                                            class="col-md-4 col-sm-6 col-12 custom-grid">
-                                                                            <div class="wpo-pricing-item">
-                                                                                <h3>VPS Hosting</h3>
-
-                                                                                <h2>$25.00<span>/Monthly</span></h2>
-                                                                                <div class="wpo-pricing-list">
-                                                                                    <ul>
-                                                                                        <li>10GB Space</li>
-                                                                                        <li>100% High Performence</li>
-                                                                                        <li>300GB SSD Disk</li>
-                                                                                        <li>5 Domain Hosted Support</li>
-                                                                                        <li>Unlimited Support</li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn ">Started Now</a>
-                                                                                <div class="shape-1"></div>
-                                                                                <div class="shape-2"></div>
-                                                                                <div class="shape-3"></div>
-                                                                                <div class="shape-4"></div>
-                                                                                <div class="shape-5"></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="col-md-4 col-sm-6 col-12 custom-grid">
-                                                                            <div class="wpo-pricing-item">
-                                                                                <h3>Shared Hosting</h3>
-
-                                                                                <h2>$49.00<span>/Monthly</span></h2>
-                                                                                <div class="wpo-pricing-list">
-                                                                                    <ul>
-                                                                                        <li>10GB Space</li>
-                                                                                        <li>100% High Performence</li>
-                                                                                        <li>300GB SSD Disk</li>
-                                                                                        <li>5 Domain Hosted Support</li>
-                                                                                        <li>Unlimited Support</li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn ">Started Now</a>
-                                                                                <div class="shape-1"></div>
-                                                                                <div class="shape-2"></div>
-                                                                                <div class="shape-3"></div>
-                                                                                <div class="shape-4"></div>
-                                                                                <div class="shape-5"></div>
-                                                                            </div>
-                                                                        </div> --}}
                                                                     </div>
                                                                 </div>
                                                                 <div id="Yearly" class="tab-pane">
                                                                     <div class="row">
-                                                                        <div
-                                                                            class="col-md-4 col-sm-6 col-12 custom-grid">
-                                                                            <div class="wpo-pricing-item">
-                                                                                <h3>Shared Hosting</h3>
+                                                                        @foreach ($yearPack as $year)
+                                                                            <div class="col-md-4 col-sm-6 col-12 custom-grid">
+                                                                                <div class="wpo-pricing-item">
+                                                                                    <h3>{{ ucwords($year->title) }}</h3>
 
-                                                                                <h2>$20.00<span>/Yearly</span></h2>
-                                                                                <div class="wpo-pricing-list">
-                                                                                    <ul>
-                                                                                        <li>10GB Space</li>
-                                                                                        <li>100% High Performence</li>
-                                                                                        <li>300GB SSD Disk</li>
-                                                                                        <li>5 Domain Hosted Support</li>
-                                                                                        <li>Unlimited Support</li>
-                                                                                    </ul>
+                                                                                    <h2>${{ ucwords($year->amount) }}<span>/Yearly</span></h2>
+                                                                                    <div class="wpo-pricing-list">
+                                                                                        <ul>
+                                                                                            @foreach ($year->sub_plan as $item)
+                                                                                                <li>{{ $item }}</li>
+                                                                                            @endforeach
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <a href="{{ route('services') }}" class="wpo-pricing-btn">Chose Plan Now </a>
                                                                                 </div>
-                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn">Chose Plan Now </a>
                                                                             </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="col-md-4 col-sm-6 col-12 custom-grid">
-                                                                            <div class="wpo-pricing-item">
-                                                                                <h3>VPS Hosting</h3>
-
-                                                                                <h2>$29.00<span>/Yearly</span></h2>
-                                                                                <div class="wpo-pricing-list">
-                                                                                    <ul>
-                                                                                        <li>10GB Space</li>
-                                                                                        <li>100% High Performence</li>
-                                                                                        <li>300GB SSD Disk</li>
-                                                                                        <li>5 Domain Hosted Support</li>
-                                                                                        <li>Unlimited Support</li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn"> Chose Plan Now </a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="col-md-4 col-sm-6 col-12 custom-grid">
-                                                                            <div class="wpo-pricing-item">
-                                                                                <h3>Cloud Hosting</h3>
-
-                                                                                <h2>$59.00<span>/Yearly</span></h2>
-                                                                                <div class="wpo-pricing-list">
-                                                                                    <ul>
-                                                                                        <li>10GB Space</li>
-                                                                                        <li>100% High Performence</li>
-                                                                                        <li>300GB SSD Disk</li>
-                                                                                        <li>5 Domain Hosted Support</li>
-                                                                                        <li>Unlimited Support</li>
-                                                                                    </ul>
-                                                                                </div>
-                                                                                <a href="{{ route('services') }}" class="wpo-pricing-btn"> Chose Plan Now </a>
-                                                                            </div>
-                                                                        </div>
+                                                                        @endforeach
                                                                     </div>
                                                                 </div>
                                                             </div>

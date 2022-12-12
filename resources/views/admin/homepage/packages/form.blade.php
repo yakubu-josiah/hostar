@@ -7,7 +7,6 @@
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
             <form action="{{ route('packageStore') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
-                @method('PUT')
                 @csrf
                 <div class="form-row mx-auto">
                     <div class="form-group col-md-3">
@@ -44,7 +43,7 @@
                         <td class=""><button type="button" id="add" class="btn btn-success mx-5">Add More</button></td>  
                     </tr>  
                 </table>            
-                <input type="submit" id="submit" class="btn btn-info" value="Submit" />  
+                <input type="submit" id="submit" class="btn btn-info" value="Add Package" />  
             </form>  
             {{-- <div class="alert alert-danger print-error-msg" style="display:none">
                         <ul></ul>

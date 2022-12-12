@@ -72,7 +72,7 @@ Route::prefix('/admin')->group(function (){
         Route::post('/overview/hosting-packages/save-package', 'packageStore')->name('packageStore');
         Route::get('overview/hosting-packages/edit-form/{id}', 'packageEdit')->name('packageEdit');
         Route::put('/overview/hosting-packages/edit/{id}/update', 'packageUpdate')->name('packageUpdate');
-        Route::delete('/overview/hosting-packages/package-delete', 'packageDestroy')->name('deletePack');
+        Route::delete('/overview/hosting-packages/package-delete/{id}', 'packageDestroy')->name('deletePack');
 
 
     });
