@@ -74,6 +74,14 @@ Route::prefix('/admin')->group(function (){
         Route::put('/overview/hosting-packages/edit/{id}/update', 'packageUpdate')->name('packageUpdate');
         Route::delete('/overview/hosting-packages/package-delete/{id}', 'packageDestroy')->name('deletePack');
 
+                    // ----- OUR SERVICES ------ //
+        Route::get('/overview/our-services', 'serviceIndex')->name('service');
+        Route::get('/overview/our-services/create-form', 'serviceCreate')->name('serviceForm');
+        Route::post('/overview/our-services/store', 'serviceStore')->name('serviceStore');
+        Route::get('/overview/our-services/edit/{id}', 'serviceEdit')->name('serviceEdit');
+        Route::put('/overview/our-services/update/{id}', 'serviceUpdate')->name('serviceUpdate');
+        Route::delete('/overview/our-services/delete/{id}', 'serviceDestroy')->name('serviceDelete');
+
 
     });
     
