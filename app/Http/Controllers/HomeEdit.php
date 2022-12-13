@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Classes\FileUpload;
 use App\Http\Requests\CardValidator;
 use App\Http\Requests\PackageValidator;
+use App\Http\Requests\ServiceValidator;
 use App\Http\Requests\topBanner;
 use App\Models\CardFeatures;
 use App\Models\Packages;
 use App\Models\PricingPlan;
+use App\Models\Services;
 use App\Models\topBanner as ModelsTopBanner;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -178,5 +180,41 @@ class HomeEdit extends Controller
         $package->delete();
 
         return redirect()->back();
+    }
+
+    public function serviceIndex() {
+
+    }
+
+    public function serviceCreate() {
+        return view('admin.homepage.services.form');
+    }
+
+    public function serviceStore(ServiceValidator $request) {
+        $validated = $request->validated();
+
+        $logo = $request->file('logo');
+        $filenameExt = Str::slug($logo->getClientOriginalName());
+        $exten = $logo->getClientOriginalExtension();
+        
+        $filename = str_replace($exten, '', $filenameExt).Str::random(4);
+
+        $validated['logo'] = FileUpload::upload($logo, 'serviceHome', $filename);
+        dd($validated['logo']);
+       
+
+        Services::create($validated);
+    }
+
+    public function serviceEdit() {
+
+    }
+
+    public function serviceUpdate() { 
+
+    }
+
+    public function serviceDestroy() {
+
     }
 }
