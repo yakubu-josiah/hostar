@@ -20,14 +20,16 @@
                         <textarea rows="2"class="form-control" name="p" placeholder="Write here...">{{ old('p', optional($service ?? null)->p) }}</textarea>
                     </div>
                 </div>
-                <div class="form-row mx-auto d-flex m-5">
-                    <div class="col-5 m-auto">
+                <div class="row d-flex mx-2">
+                    <div class="mx-5">
                         <label for="logo" class="col form-label h4">Service Logo</label>
-                        <div style=' overflow:hidden;'>
+                        <div >
                             <input id="upfile" name="logo" type="file" value="{{ old('logo', optional($service ?? null)->logo) }}"/>
                         </div>
                     </div>
-                    <input type="submit" value="Save Changes" class="btn  btn-primary"/>
+                    <div class="mt-5">
+                        <input type="submit" value="Save Changes" class="btn btn-primary p-3 mt-3"/>
+                    </div>
                 </div> 
             </form>
         </x-admin.maincontent>
