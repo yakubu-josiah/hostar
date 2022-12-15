@@ -12,6 +12,7 @@ use App\Models\Packages;
 use App\Models\PricingPlan;
 use App\Models\Services;
 use App\Models\topBanner as ModelsTopBanner;
+use Illuminate\Cache\RedisTaggedCache;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -183,7 +184,7 @@ class HomeEdit extends Controller
     }
 
     public function serviceIndex() {
-
+        return view('admin.homepage.services.index', ['services' => Services::all()]);
     }
 
     public function serviceCreate() {
@@ -233,7 +234,10 @@ class HomeEdit extends Controller
         return redirect()->back();
     }
 
-    public function serviceDestroy() {
+    public function serviceDestroy($id) {
+        $service = Services::findOrFail($id);
+        $service->delete();
 
+        return redirect()->back();
     }
 }

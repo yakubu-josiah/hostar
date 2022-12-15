@@ -1,5 +1,5 @@
 @extends('partials.admin.layout')
-@section('title', 'Admin - Edit Services')
+@section('title', 'Admin - Create Services')
 
 @section('content')
     <x-admin.dashboard />

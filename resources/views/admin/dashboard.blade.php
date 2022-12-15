@@ -54,7 +54,7 @@
                             </x-admin.uiElement>
                             
                             <x-admin.uiElement>
-                                <a href="#">
+                                <a href="{{ route('service') }}">
                                     <div class="card-header">                                                  
                                         <h5>Services Offered</h5>
                                     </div>
