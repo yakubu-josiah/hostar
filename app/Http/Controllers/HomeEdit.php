@@ -198,20 +198,39 @@ class HomeEdit extends Controller
         $exten = $logo->getClientOriginalExtension();
         
         $filename = str_replace($exten, '', $filenameExt).Str::random(4);
-
         $validated['logo'] = FileUpload::upload($logo, 'serviceHome', $filename);
-        dd($validated['logo']);
-       
-
+        
         Services::create($validated);
+        return redirect()->back();
     }
 
-    public function serviceEdit() {
-
+    public function serviceEdit($id) {
+        return view('admin.homepage.services.edit',['service' => Services::findOrFail($id)]);
     }
 
-    public function serviceUpdate() { 
+    public function serviceUpdate(ServiceValidator $request, Services $service) {
+        if ($request->hasFile('logo')) {
+            $logo = $request->file('logo')->store('service');
+        }
+        $logo = $request->file('logo');
+        if ($logo) {
+            $filenameExt = Str::slug($logo->getClientOriginalName());
+            $exten = $logo->getClientOriginalExtension();
+            
+            $filenamee = str_replace($exten, '', $filenameExt).Str::random(4);
+            $filename = FileUpload::upload($logo, 'serviceHome', $filenamee);
+            
+        } else {
+            $filename = $service->logo;
+        }
+        $validated['logo'] = FileUpload::upload($logo, 'serviceHome', $filename);
+        $service->update($request->validated() + [
+            'h2' => $service->h2,
+            'p' => $service->p,
+            'logo' => $filename
+        ]);
 
+        return redirect()->back();
     }
 
     public function serviceDestroy() {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CardFeatures;
 use App\Models\Packages;
 use App\Models\PricingPlan;
+use App\Models\Services;
 use App\Models\topBanner;
 use Illuminate\Http\Request;
 
@@ -15,9 +16,10 @@ class HomeController extends Controller
         $banner = topBanner::first();
         $card = CardFeatures::first();
         $pricing = PricingPlan::first();
-
+        
         $monthPack = Packages::guestPackage('monthly');
         $yearPack = Packages::guestPackage('yearly');
+        $service = Services::all();
 
         return view('welcome', [
             'banner' => $banner,
@@ -25,6 +27,7 @@ class HomeController extends Controller
             'pricing' => $pricing,
             'monthPack' => $monthPack,
             'yearPack' => $yearPack,
+            'service' => $service
         ]);
     }
 

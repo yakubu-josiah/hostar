@@ -345,91 +345,19 @@
                                                     <div class="wpo-service-area">
                                                         <div class="container">
                                                             <div class="row">
-                                                                <div class="col-lg-4 col-sm-6 col-12 custom-grid">
-                                                                    <div class="wpo-service-item">
-                                                                        <div class="wpo-service-icon">
-                                                                            <img decoding="async" src="{{ asset('images/server.png') }}" alt="">
-                                                                        </div>
-                                                                        <div class="wpo-service-text">
-                                                                            <h2><a href="{{ route('services') }}">WordPress Hosting</a></h2>
-                                                                            <p>Web hosting is a service that allows
-                                                                                organizations and individuals to post a
-                                                                                website or web page.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-sm-6 col-12 custom-grid">
-                                                                    <div class="wpo-service-item">
-                                                                        <div class="wpo-service-icon">
-                                                                            <img decoding="async" src="{{ asset('images/refresh.png') }}" alt="">
-                                                                        </div>
-                                                                        <div class="wpo-service-text">
-                                                                            <h2><a href="{{ route('services') }}">Dedicated Hosting</a></h2>
-                                                                            <p>Web hosting is a service that allows
-                                                                                organizations and individuals to post a
-                                                                                website or web page.
-                                                                            </p>
+                                                                @foreach ($service as $item)
+                                                                    <div class="col-lg-4 col-sm-6 col-12 custom-grid">
+                                                                        <div class="wpo-service-item">
+                                                                            <div class="wpo-service-icon">
+                                                                                <img decoding="async" src="{{ $item->logo }}" alt="">
+                                                                            </div>
+                                                                            <div class="wpo-service-text">
+                                                                                <h2><a href="{{ route('services') }}">{{ ucwords($item->h2) }}</a></h2>
+                                                                                <p>{{ ucfirst($item->p) }}</p>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-sm-6 col-12 custom-grid">
-                                                                    <div class="wpo-service-item">
-                                                                        <div class="wpo-service-icon">
-                                                                            <img decoding="async" src="{{ asset('images/database.png') }}" alt="">
-                                                                        </div>
-                                                                        <div class="wpo-service-text">
-                                                                            <h2><a href="{{ route('services') }}">Reseller Hosting</a></h2>
-                                                                            <p>Web hosting is a service that allows
-                                                                                organizations and individuals to post a
-                                                                                website or web page.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-sm-6 col-12 custom-grid">
-                                                                    <div class="wpo-service-item">
-                                                                        <div class="wpo-service-icon">
-                                                                            <img decoding="async" src="{{ asset('images/web.png') }}" alt="">
-                                                                        </div>
-                                                                        <div class="wpo-service-text">
-                                                                            <h2><a href="{{ route('services') }}">Cloud Hosting</a></h2>
-                                                                            <p>Web hosting is a service that allows
-                                                                                organizations and individuals to post a
-                                                                                website or web page.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-sm-6 col-12 custom-grid">
-                                                                    <div class="wpo-service-item">
-                                                                        <div class="wpo-service-icon">
-                                                                            <img decoding="async" src="{{ asset('images/technology.png') }}" alt="">
-                                                                        </div>
-                                                                        <div class="wpo-service-text">
-                                                                            <h2><a href="{{ route('services') }}">VPS Hosting</a></h2>
-                                                                            <p>Web hosting is a service that allows
-                                                                                organizations and individuals to post a
-                                                                                website or web page.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-lg-4 col-sm-6 col-12 custom-grid">
-                                                                    <div class="wpo-service-item">
-                                                                        <div class="wpo-service-icon">
-                                                                            <img decoding="async" src="{{ asset('images/server-1.png') }}" alt="">
-                                                                        </div>
-                                                                        <div class="wpo-service-text">
-                                                                            <h2><a href="{{ route('services') }}">Shared Hosting</a></h2>
-                                                                            <p>Web hosting is a service that allows
-                                                                                organizations and individuals to post a
-                                                                                website or web page.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-
+                                                                @endforeach
                                                             </div>
                                                         </div>
                                                     </div>

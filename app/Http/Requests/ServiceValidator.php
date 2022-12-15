@@ -25,7 +25,7 @@ class ServiceValidator extends FormRequest
     {
         return [
             'h2' => 'max:250',
-            'p' => 'max:500',
+            'p' => 'max:1000',
             'logo' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ];
     }
