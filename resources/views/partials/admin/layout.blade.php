@@ -18,6 +18,9 @@
 
     <link rel="stylesheet" href="{{ asset('css/admin-style.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/admin-login.css') }}">
+
+
     <style>
         .fixed-button.active {
             bottom: 50px;

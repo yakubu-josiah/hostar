@@ -25,6 +25,9 @@ Route::controller(HomeController::class)->group(function (){
     Route::get('/account-sign-in', 'regView')->name('regview');
 });
 
+Route::get('/admin/login', function() {
+    return view('admin.login');
+});
 
 Route::prefix('/about')->group(function () {
     Route::controller(AboutController::class)->group(function (){
