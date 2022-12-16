@@ -1,5 +1,5 @@
 @extends('partials.layout')
-@section('title', 'Homepage')
+@section('title', 'Dashboardpage')
 
 @section ('content')
     @include('partials.svg')
