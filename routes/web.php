@@ -26,7 +26,7 @@ Route::controller(HomeController::class)->group(function (){
 });
 
 Route::get('/admin/login', function() {
-    return view('admin.login');
+    return view('admin.auth.login');
 });
 
 Route::prefix('/about')->group(function () {
@@ -50,6 +50,7 @@ Route::prefix('/contact')->group(function (){
 
 Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
+        Route::get('/login', 'loginAdmin')->name('loginAdmin');
         Route::get('/dashboard', 'dashboard')->name('adminDash');
         
     });

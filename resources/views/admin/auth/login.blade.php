@@ -5,7 +5,8 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form">
+                <form action="{{ route('loginAdmin') }}" class="login100-form validate-form" method="GET">
+                    @csrf
                     <span class="login100-form-title">
                         <i class="fa fa-user-secret" aria-hidden="true"></i>
                         Admin Login
