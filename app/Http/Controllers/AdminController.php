@@ -40,6 +40,7 @@ class AdminController extends Controller
     public function loginAdmin(Request $request)
     {
         if (auth()->guard('admin')->user()) {
+            // dd($request);
             return redirect()->route('adminDash');
         } else {
             return view('admin.auth.login');

@@ -5,7 +5,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form action="{{ route('loginAdmin') }}" class="login100-form validate-form" method="GET">
+                <form action="{{ route('adminDash') }}" class="login100-form validate-form" method="GET">
                     @csrf
                     <span class="login100-form-title">
                         <i class="fa fa-user-secret" aria-hidden="true"></i>
@@ -26,9 +26,7 @@
                         </span>
                     </div>
                     <div class="container-login100-form-btn">
-                        <button class="login100-form-btn">
-                            Login
-                        </button>
+                        <input type="submit" class="login100-form-btn" value="Login"/>               
                     </div>
                     <div class="text-left p-t-12">
                         <span class="txt1">
