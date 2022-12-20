@@ -50,6 +50,7 @@ Route::prefix('/contact')->group(function (){
 
 Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
+        Route::get('/dashboard', 'dashboard')->name('adminDash');
         Route::get('/login', 'loginAdmin')->name('loginAdmin');
        
     });
@@ -92,7 +93,7 @@ Route::prefix('/admin')->group(function (){
 Route::middleware('admin:admin')->group(function (){
     Route::group(['prefix' => 'admin'], function (){
         Route::controller(AdminController::class)->group(function(){
-            Route::get('/dashboard', 'dashboard')->name('adminDash');
+            // Route::get('/dashboard', 'dashboard')->name('adminDash');
         });
     });
 });

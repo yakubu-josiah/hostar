@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            TopBannerSeeder::class
+            TopBannerSeeder::class,
+            CardSeeder::class
         ]);
 
         // \App\Models\Admin::factory()->create();
