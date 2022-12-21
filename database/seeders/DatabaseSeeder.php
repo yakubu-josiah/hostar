@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             TopBannerSeeder::class,
-            CardSeeder::class
+            CardSeeder::class,
+            PricingSeeder::class
         ]);
 
         // \App\Models\Admin::factory()->create();
