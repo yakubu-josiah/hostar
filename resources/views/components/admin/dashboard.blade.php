@@ -25,43 +25,47 @@
                         </a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
-                        <label>UI Elements</label>
+                        <label>CONTENT MANAGEMENT</label>
                     </li>
                     <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
                         class="nav-item pcoded-hasmenu">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon">
-                                <i class="feather icon-box"></i></span><span class="pcoded-mtext">Overview</span>
+                                <i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage Content</span>
                         </a>
                         <ul class="pcoded-submenu">
-                            <li class=""><a href="#" class="">Homepage Section</a></li>
-                            <li class=""><a href="#" class="">About-us Section</a></li>
-                            <li class=""><a href="#" class="">Hosting Section</a></li>
-                            <li class=""><a href="#" class="">Pages Section</a></li>
-                            <li class=""><a href="#" class="">Contact Section</a></li>
+                            <li class=""><a href="#" class="">About Us</a></li>
+                            <li class=""><a href="#" class="">Packages</a></li>
+                            <li class=""><a href="#" class="">Home Banner</a></li>
+                            <li class=""><a href="#" class="">Services</a></li>
+                            <li class=""><a href="#" class="">Why Choose Us</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
-                        <label>Advanced Settings</label>
+                        <label>Testimonials</label>
                     </li>
 
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
-                        <a href="#" class="nav-link "><span class="pcoded-micon">
-                                <i class="feather icon-server"></i></span><span class="pcoded-mtext">Account
-                                Information</span></a>
-                    </li>
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
-                        <a href="#" class="nav-link "><span class="pcoded-micon">
-                                <i class="feather icon-server"></i></span><span class="pcoded-mtext">Mail
-                                Box</span></a>
-                    </li>
-                    <li data-username="Table bootstrap datatable footable" class="nav-item">
-                        <a href="#" class="nav-link "><span class="pcoded-micon">
-                                <i class="feather icon-user"></i></span><span class="pcoded-mtext">Profile
-                                Settings</span></a>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds"
+                        class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon">
+                                <i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage News</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="#" class="">All News</a></li>
+                            <li class=""><a href="#" class="">Add News</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
-                        <label>Authentication</label>
+                        <label>ACCOUNT SETTINGS</label>
                     </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="#" class="nav-link "><span class="pcoded-micon">
+                                <i class="feather icon-server"></i></span><span class="pcoded-mtext">Profile Settings</span></a>
+                    </li>
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="#" class="nav-link "><span class="pcoded-micon">
+                                <i class="feather icon-server"></i></span><span class="pcoded-mtext">Change Password</span></a>
+                    </li>
+                    
                     <li data-username="Sample Page" class="nav-item">
                         <h6 class="text-muted mt-4 mb-0">
                             <a class="nav-link" href="{{ route('sign_out') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
@@ -95,7 +99,6 @@
             <div class="b-bg">
                 <img class="b-brand b-bg" src="{{ asset('images/tr-logo.png') }}" alt="">
             </div>
-            {{-- <span class="b-title">My Coin Auction</span> --}}
         </a>
     </div>
     <a class="mobile-menu" id="mobile-header" href="javascript:">
