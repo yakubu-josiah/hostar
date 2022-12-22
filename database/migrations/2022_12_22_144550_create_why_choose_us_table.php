@@ -13,14 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('card_features', function (Blueprint $table) {
+        Schema::create('why_choose_us', function (Blueprint $table) {
             $table->id();
-            $table->string('fst_h2')->nullable();
-            $table->string('fst_p')->nullable();
-            $table->string('scd_h2')->nullable();
-            $table->string('scd_p')->nullable();
-            $table->string('thd_h2')->nullable();
-            $table->string('thd_p')->nullable();
+            $table->string('title')->nullable();
+            $table->text('image')->nullable();
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('card_features');
+        Schema::dropIfExists('why_choose_us');
     }
 };

@@ -20,7 +20,7 @@
                     </li>
                     <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project"
                         class="nav-item active">
-                        <a href="#" class="nav-link "><span class="pcoded-micon">
+                        <a href="{{ route('adminDash') }}" class="nav-link "><span class="pcoded-micon">
                                 <i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span>
                         </a>
                     </li>
@@ -37,7 +37,7 @@
                             <li class=""><a href="#" class="">Packages</a></li>
                             <li class=""><a href="#" class="">Home Banner</a></li>
                             <li class=""><a href="#" class="">Services</a></li>
-                            <li class=""><a href="#" class="">Why Choose Us</a></li>
+                            <li class=""><a href="content-management/why-choose-us" class="">Why Choose Us</a></li>
                         </ul>
                     </li>
                     <li class="nav-item pcoded-menu-caption">

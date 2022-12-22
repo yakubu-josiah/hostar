@@ -8,7 +8,7 @@
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
             <p class="font-italic m-4 h4"> You can update this feature...</p>   
 
-            <form action="{{ route('cardUpdate') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+            {{-- <form action="{{ route('cardUpdate') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
                 @csrf
                 @method('PUT')
                 <h4 class="text-center"> First Card </h4>
@@ -47,7 +47,7 @@
                 <div style="margin-top: 50px; width: 100%; ">
                     <input type="submit" value="Save Changes" class="btn  btn-primary" style="width: 35%; margin-left: 45px" >
                 </div>
-            </form>       
+            </form>        --}}
         </x-admin.maincontent>
     </x-admin.wrapper>
 

@@ -7,7 +7,6 @@ use App\Http\Requests\CardValidator;
 use App\Http\Requests\PackageValidator;
 use App\Http\Requests\ServiceValidator;
 use App\Http\Requests\topBanner;
-use App\Models\CardFeatures;
 use App\Models\Packages;
 use App\Models\PricingPlan;
 use App\Models\Services;
@@ -38,21 +37,9 @@ class HomeEdit extends Controller
     
     public function bannerUpdate(topBanner $request, ModelsTopBanner $banner) {        
         if($request->hasFile('image') && $request->hasFile('logo')) {
-            // Storage::delete($banner->image);
-            // Storage::delete($banner->logo);
-            // \public_path()::delete($banner->image);
-            // \public_path()::delete($banner->logo);
             $image = $request->file('image')->store('banner');
             $logo = $request->file('logo')->store('banner');
             
-            // $destinationPath = 'storage/images/';
-            // $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            // $profileImages = date('YmdHis') . "." . $logo->getClientOriginalExtension();
-            // $image->move($destinationPath, $profileImage);
-            // $logo->move($destinationPath, $profileImages);
-            // $input['image'] = "$profileImage";
-            // $input['logo'] = "$profileImages";
-            // $banner->update($input);
         }
 
         $image = $request->file('image');
@@ -79,34 +66,6 @@ class HomeEdit extends Controller
 
         return redirect()->route('adminDash');
 
-
-        // $filename = $image->getClientOriginalName();
-            // $filemame = $logo->getClientOriginalName();
-            // $image->move(public_path('images/'), $filename);
-            // $logo->move(public_path('images/'), $filemame);
-            // $banner->image = $request->file('image')->getClientOriginalName();
-            // $banner->logo = $request->file('logo')->getClientOriginalName();
-
-    }
-
-    public function cardEdit() {
-        return view('admin.homepage.cardFeatures', ['card' => CardFeatures::first()]);
-    }
-
-    public function cardStore(CardValidator $request) {
-        $validated = $request->validated();
-        CardFeatures::create($validated);
-
-        return redirect()->route('adminDash');
-    }
-
-    public function cardUpdate(CardValidator $request) {
-        $card = CardFeatures::first();
-        $validated = $request->validated();
-        $card->fill($validated);
-        $card->save();
-
-        return redirect()->route('adminDash');
     }
 
     public function pricingEdit() {
