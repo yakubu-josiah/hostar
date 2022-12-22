@@ -63,16 +63,17 @@
                         <label>Authentication</label>
                     </li>
                     <li data-username="Sample Page" class="nav-item">
-                        <a class="nav-link" href="#"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <span class="pcoded-micon"><i class="feather icon-power"></i></span>
-                            <span class="pcoded-mtext">Sign Out</span>
-                        </a>
-                        <form id="logout-form" action="#" method="POST" class="d-none">
-                            <input type="hidden" name="_token" value="RjysuUtiPlCCioGjlsf1R67pPbQTEBVPE1zs6Dg8">
-                        </form>
+                        <h6 class="text-muted mt-4 mb-0">
+                            <a class="nav-link" href="{{ route('sign_out') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+                                <span class="pcoded-micon"><i class="feather icon-power"></i></span>
+                                <span class="pcoded-mtext">Sign Out</span>
+                             </a>
+                            <form id="logout-form" action="{{ route('sign_out') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </h6>
                     </li>
-                </ul>
+               </ul>
 
 
             </div>

@@ -25,9 +25,6 @@ Route::controller(HomeController::class)->group(function (){
     Route::get('/account-sign-in', 'regView')->name('regview');
 });
 
-Route::get('/admin/login', function() {
-    return view('admin.auth.login');
-});
 
 Route::prefix('/about')->group(function () {
     Route::controller(AboutController::class)->group(function (){
@@ -48,28 +45,40 @@ Route::prefix('/contact')->group(function (){
     });
 });
 
+
+Route::prefix('/shop')->group(function (){
+    Route::controller(ShopController::class)->group(function (){
+        Route::get('/', 'index')->name('shop');
+        Route::get('/order-listings', 'single')->name('single');
+    });
+});
+
+
 Route::prefix('/admin')->group(function (){
     Route::controller(AdminController::class)->group(function (){
-        Route::get('/dashboard', 'dashboard')->name('adminDash');
-        
-       
+        Route::get('/login', 'loginAdmin')->name('loginAdmin');
+        Route::post('/login', 'store')->name('adminStr');
+        Route::get('/sign-up', 'adminRegister')->name('adminReg');
+        Route::post('/register', 'reg')->name('adminRegs');
+        Route::post('/sign-out', 'adminLogout')->name('sign_out');
     });
+
     Route::controller(HomeEdit::class)->group(function (){ 
-                    // ----- TOP BANNER ------ //  
+        // ----- TOP BANNER ------ //  
         Route::get('/overview/top-banner', 'bannerEdit')->name('banner');
         Route::post('/overview/top-banner/edit', 'bannerStore')->name('bannerStore');
         Route::put('/overview/top-banner/edit/update', 'bannerUpdate')->name('bannerUpdate');
-
+    
                     // ----- CARD FEATURES ------ //
         Route::get('/overview/card-features', 'cardEdit')->name('card');
         Route::post('/overview/card-features/edit', 'cardStore')->name('cardStore');
         Route::put('/overview/card-features/edit/update', 'cardUpdate')->name('cardUpdate');  
-
+    
                     // ----- PRICING PLANS ------ //
         Route::get('/overview/pricing-plans', 'pricingEdit')->name('pricing');
         Route::post('/overview/pricing-plans/edit', 'pricingStore')->name('pricingStore');
         Route::put('/overview/pricing-plans/edit/update', 'pricingUpdate')->name('pricingUpdate');
-
+    
                     // ----- ALL PACKAGES ------ //
         Route::get('/overview/hosting-packages', 'packageIndex')->name('packages');
         Route::get('/overview/hosting-packages/create-form', 'packageCreate')->name('packagesForm');
@@ -77,7 +86,7 @@ Route::prefix('/admin')->group(function (){
         Route::get('overview/hosting-packages/edit-form/{id}', 'packageEdit')->name('packageEdit');
         Route::put('/overview/hosting-packages/edit/{id}/update', 'packageUpdate')->name('packageUpdate');
         Route::delete('/overview/hosting-packages/package-delete/{id}', 'packageDestroy')->name('deletePack');
-
+    
                     // ----- OUR SERVICES ------ //
         Route::get('/overview/our-services', 'serviceIndex')->name('service');
         Route::get('/overview/our-services/create-form', 'serviceCreate')->name('serviceForm');
@@ -85,22 +94,19 @@ Route::prefix('/admin')->group(function (){
         Route::get('/overview/our-services/edit/{id}', 'serviceEdit')->name('serviceEdit');
         Route::put('/overview/our-services/update/{id}', 'serviceUpdate')->name('serviceUpdate');
         Route::delete('/overview/our-services/delete/{id}', 'serviceDestroy')->name('serviceDelete');
-
-
+    
+    
     });
     
 });
+
+
+
 Route::middleware('admin:admin')->group(function (){
     Route::group(['prefix' => 'admin'], function (){
         Route::controller(AdminController::class)->group(function(){
             Route::get('/dashboard', 'dashboard')->name('adminDash');
-        });
-    });
-});
 
-Route::prefix('/shop')->group(function (){
-    Route::controller(ShopController::class)->group(function (){
-        Route::get('/', 'index')->name('shop');
-        Route::get('/order-listings', 'single')->name('single');
+        });        
     });
 });

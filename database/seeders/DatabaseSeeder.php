@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TopBannerSeeder::class,
             CardSeeder::class,
-            PricingSeeder::class
+            PricingSeeder::class,
+            \App\Models\Admin::factory()->create()
         ]);
 
-        // \App\Models\Admin::factory()->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

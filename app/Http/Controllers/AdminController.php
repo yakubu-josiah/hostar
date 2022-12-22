@@ -13,7 +13,7 @@ use Laravel\Fortify\Contracts\RegisterResponse;
 
 class AdminController extends Controller
 {
-    /**
+     /**
      * The guard implementation.
      *
      * @var \Illuminate\Contracts\Auth\StatefulGuard
@@ -27,24 +27,19 @@ class AdminController extends Controller
      * @return void
      */
 
-    public function dashboard() 
-    {
-        return view('admin.dashboard');
-    }
-    /**
-     * Show the login view.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Laravel\Fortify\Contracts\LoginViewResponse
-     */
     public function loginAdmin(Request $request)
     {
         if (auth()->guard('admin')->user()) {
-            dd($request);
-            // return redirect()->route('adminDash');
+            return redirect()->route('adminDash');
         } else {
             return view('admin.auth.login');
         }
+    }
+
+
+    public function dashboard() 
+    {
+        return view('admin.dashboard');
     }
 
     public function reg(Request $request,
@@ -75,9 +70,10 @@ class AdminController extends Controller
                                 ->withInput();
             }
             $email = $request->email;
+            // dd($request->email);
             $password = $request->password;
             if (auth()->guard('admin')->attempt(['email' => $email, 'password' => $password])) {
-                return redirect()->route('adminDash');
+               return redirect()->route('adminDash');
             }else{
                 return back()->withInput($request->only('email'))->withErrors(['Opps!! Your credientials does not match our records']);
             }
@@ -87,6 +83,6 @@ class AdminController extends Controller
     {
         auth()->guard('admin')->logout();
         $request->session()->invalidate();
-        return redirect()->route('adminLog');
+        return redirect()->route('loginAdmin');
     }
 }
