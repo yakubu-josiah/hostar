@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Classes\FileUpload;
 use App\Http\Controllers\Controller;
 use App\Models\whyChooseUs as ModelsWhyChooseUs;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class whyChooseUs extends Controller
@@ -36,9 +38,27 @@ class whyChooseUs extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, ModelsWhyChooseUs $lists)
     {
-        //
+        if($request->hasFile('image') ) {
+            $image = $request->file('image')->store('lists');
+        }
+
+        $image = $request->file('image');
+
+        if($image){
+            $imgurl = FileUpload::upload($image, 'asset', 'siteImage'.Str::random(7));
+        } else {
+            $imgurl = $lists->image;
+        }
+
+        $validated['image'] = FileUpload::upload($image, 'asset', 'siteLogo'.Str::random(7));
+        $lists->update($request->validated() + [
+            'title' => $lists->title,
+            'content' => $lists->content,
+            'image' => $imgurl,
+        ]);
+        return redirect()->route('why-choose-us.index');
     }
 
     /**
@@ -60,7 +80,7 @@ class whyChooseUs extends Controller
      */
     public function edit($id)
     {
-        return view('admin.whyChooseUs.editform');
+        return view('admin.whyChooseUs.editform', ['lists' => ModelsWhyChooseUs::findOrFail($id)]);
     }
 
     /**
@@ -72,7 +92,12 @@ class whyChooseUs extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validated = $request->validated();
+        $lists = ModelsWhyChooseUs::findOrFail($id);
+        $lists->fill($validated);
+        $lists->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -83,6 +108,9 @@ class whyChooseUs extends Controller
      */
     public function destroy($id)
     {
-        //
+        $list = ModelsWhyChooseUs::findOrFail($id);
+        $list->delete();
+
+        return redirect()->back();
     }
 }
