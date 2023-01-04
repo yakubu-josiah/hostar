@@ -152,56 +152,25 @@
                                                     <div class="hostar-feature wpo-features-area">
                                                         <div class="container">
                                                             <div class="row">
-                                                                <div class="col-md-4 col-sm-6 custom-grid col-12">
-                                                                    <div class="wpo-features-item">
-                                                                        <div class="wpo-features-single">
-                                                                            <div class="wpo-features-icon">
-                                                                                <i class='fi flaticon-startup'></i>
+                                                                @foreach ($card as $item)
+                                                                    <div class="col-md-4 col-sm-6 custom-grid col-12">
+                                                                        <div class="wpo-features-item">
+                                                                            <div class="wpo-features-single">
+                                                                                <div class="wpo-features-icon">
+                                                                                    <i class='fi flaticon-startup'></i>
+                                                                                </div>
+                                                                                <div class="wpo-features-text">
+                                                                                    <h2>{{ $item->h2 }}</h2>
+                                                                                    <p>{{ $item->p }}</p>
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="wpo-features-text">
-                                                                                <h2>{{ $card->fst_h2 }}</h2>
-                                                                                <p>{{ $card->fst_p }}</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="wpo-features-img">
-                                                                            <img decoding="async" src="{{ asset('images/feature-1.png') }}" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4 col-sm-6 custom-grid col-12">
-                                                                    <div class="wpo-features-item">
-                                                                        <div class="wpo-features-single">
-                                                                            <div class="wpo-features-icon">
-                                                                                <i class='fi flaticon-label'></i>
-                                                                            </div>
-                                                                            <div class="wpo-features-text">
-                                                                                <h2>{{ $card->scd_h2 }}</h2>
-                                                                                <p>{{ $card->scd_p }}
-                                                                                </p>
+                                                                            <div class="wpo-features-img">
+                                                                                <img decoding="async" src="{{ $item->logo }}" alt="">
                                                                             </div>
                                                                         </div>
-                                                                        <div class="wpo-features-img">
-                                                                            <img decoding="async" src="{{ asset('images/feature-2.png') }}" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-md-4 col-sm-6 custom-grid col-12">
-                                                                    <div class="wpo-features-item">
-                                                                        <div class="wpo-features-single">
-                                                                            <div class="wpo-features-icon">
-                                                                                <i class='fi flaticon-support'></i>
-                                                                            </div>
-                                                                            <div class="wpo-features-text">
-                                                                                <h2>{{ $card->thd_h2 }}</h2>
-                                                                                <p>{{ $card->thd_p }}
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="wpo-features-img">
-                                                                            <img decoding="async" src="{{ asset('images/feature-3.png') }}" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                                    </div>  
+                                                                @endforeach
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
