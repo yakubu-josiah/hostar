@@ -153,22 +153,22 @@
                                                         <div class="container">
                                                             <div class="row">
                                                                 @foreach ($card as $item)
-                                                                    <div class="col-md-4 col-sm-6 custom-grid col-12">
+                                                                   <div class="col-md-4 col-sm-6 custom-grid col-12">
                                                                         <div class="wpo-features-item">
                                                                             <div class="wpo-features-single">
                                                                                 <div class="wpo-features-icon">
-                                                                                    <i class='fi flaticon-startup'></i>
+                                                                                    <i class='{{ $card->logo }}'></i>
                                                                                 </div>
                                                                                 <div class="wpo-features-text">
-                                                                                    <h2>{{ $item->h2 }}</h2>
-                                                                                    <p>{{ $item->p }}</p>
+                                                                                    <h2>{{ $card->title }}</h2>
+                                                                                    <p>{{ $card->content }}</p>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="wpo-features-img">
-                                                                                <img decoding="async" src="{{ $item->logo }}" alt="">
-                                                                            </div>
+                                                                            {{-- <div class="wpo-features-img">
+                                                                                <img decoding="async" src="{{ asset('images/feature-1.png') }}" alt="">
+                                                                            </div> --}}
                                                                         </div>
-                                                                    </div>  
+                                                                    </div> 
                                                                 @endforeach
                                                                 
                                                             </div>
