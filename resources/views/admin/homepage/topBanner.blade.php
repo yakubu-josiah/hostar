@@ -8,7 +8,7 @@
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
             <p class="font-italic m-4 h4"> You can update this feature...</p>
             <form action="{{ route('bannerUpdate') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
-                @csrf
+                @csrf @method('PUT')
                 <div class="form-row mx-auto d-flex" >
                     <div class="col-5 m-auto">
                         <label for="h2" class="col form-label h4">Lead Text Header</label>

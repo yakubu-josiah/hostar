@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Classes\FileUpload;
-use App\Http\Requests\CardValidator;
 use App\Http\Requests\PackageValidator;
 use App\Http\Requests\ServiceValidator;
 use App\Http\Requests\topBanner;
@@ -11,7 +10,6 @@ use App\Models\Packages;
 use App\Models\PricingPlan;
 use App\Models\Services;
 use App\Models\topBanner as ModelsTopBanner;
-use Illuminate\Cache\RedisTaggedCache;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -36,28 +34,23 @@ class HomeEdit extends Controller
     }
     
     public function bannerUpdate(topBanner $request) {    
-        // if($request->hasFile('image') && $request->hasFile('logo')) {
-        //     $image = $request->file('image')->store('banner');
-        //     $logo = $request->file('logo')->store('banner');
-            
-        // }
         $banner = ModelsTopBanner::first();
 
         $image = $request->file('image');
         $logo = $request->file('logo');
 
         if($image){
-            $imgurl = FileUpload::upload($image, 'asset', 'siteImage'.Str::random(7));
+            $imgurl = FileUpload::upload($image, 'top_banner', 'siteImage'.Str::random(7));
         } else {
             $imgurl = $banner->image;
         }
         if($logo){
-            $logourl = FileUpload::upload($logo, 'asset', 'siteLogo'.Str::random(7));
+            $logourl = FileUpload::upload($logo, 'top_banner', 'siteLogo'.Str::random(7));
         } else {
             $logourl = $banner->logo;
         }
-        $validated['logo'] = FileUpload::upload($logo, 'asset', 'siteLogo'.Str::random(7));
-        $validated['image'] = FileUpload::upload($image, 'asset', 'siteImage'.Str::random(7));
+        $validated['logo'] = FileUpload::upload($logo, 'top_banner', 'siteLogo'.Str::random(7));
+        $validated['image'] = FileUpload::upload($image, 'top_banner', 'siteImage'.Str::random(7));
         $banner->update($request->validated() + [
             'h2' => $banner->h2,
             'p' => $banner->p,
