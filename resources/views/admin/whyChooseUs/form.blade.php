@@ -14,8 +14,8 @@
                         <input class="form-control" name="title" placeholder="Write here..." />
                     </div>
                     <div class="row col-5 m-auto">
-                        <label for="logo" class="col form-label h4">Icon Name</label>
-                        <input class="form-control" name="logo" placeholder="Paste Icon name here..." />
+                        <label for="image" class="col form-label h4">Icon Name</label>
+                        <input class="form-control" name="image" placeholder="Paste Icon name here..." />
                     </div>
                 </div>
                 <div class="form-row d-flex m-5">                   

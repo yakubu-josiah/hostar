@@ -157,11 +157,11 @@
                                                                         <div class="wpo-features-item">
                                                                             <div class="wpo-features-single">
                                                                                 <div class="wpo-features-icon">
-                                                                                    <i class='{{ $card->logo }}'></i>
+                                                                                    <i class='{{ $item->image }}'></i>
                                                                                 </div>
                                                                                 <div class="wpo-features-text">
-                                                                                    <h2>{{ $card->title }}</h2>
-                                                                                    <p>{{ $card->content }}</p>
+                                                                                    <h2>{{ $item->title }}</h2>
+                                                                                    <p>{{ $item->content }}</p>
                                                                                 </div>
                                                                             </div>
                                                                             {{-- <div class="wpo-features-img">

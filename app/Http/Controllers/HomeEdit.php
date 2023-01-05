@@ -35,12 +35,13 @@ class HomeEdit extends Controller
         return redirect()->route('adminDash');
     }
     
-    public function bannerUpdate(topBanner $request, ModelsTopBanner $banner) {        
-        if($request->hasFile('image') && $request->hasFile('logo')) {
-            $image = $request->file('image')->store('banner');
-            $logo = $request->file('logo')->store('banner');
+    public function bannerUpdate(topBanner $request) {    
+        // if($request->hasFile('image') && $request->hasFile('logo')) {
+        //     $image = $request->file('image')->store('banner');
+        //     $logo = $request->file('logo')->store('banner');
             
-        }
+        // }
+        $banner = ModelsTopBanner::first();
 
         $image = $request->file('image');
         $logo = $request->file('logo');
@@ -55,8 +56,8 @@ class HomeEdit extends Controller
         } else {
             $logourl = $banner->logo;
         }
-
         $validated['logo'] = FileUpload::upload($logo, 'asset', 'siteLogo'.Str::random(7));
+        $validated['image'] = FileUpload::upload($image, 'asset', 'siteImage'.Str::random(7));
         $banner->update($request->validated() + [
             'h2' => $banner->h2,
             'p' => $banner->p,

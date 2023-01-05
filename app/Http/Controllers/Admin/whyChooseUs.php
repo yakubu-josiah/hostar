@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\whyChooseUs as ModelsWhyChooseUs;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class whyChooseUs extends Controller
 {
@@ -38,30 +39,18 @@ class whyChooseUs extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, ModelsWhyChooseUs $lists)
+    public function store(Request $request)
     {
-        if($request->hasFile('image') ) {
-            $image = $request->file('image')->store('lists');
-        }
-
-        $image = $request->file('image');
-
-        if($image){
-            $imgurl = FileUpload::upload($image, 'asset', 'siteImage'.Str::random(7));
-        } else {
-            $imgurl = $lists->image;
-        }
-
-        $validated['image'] = FileUpload::upload($image, 'asset', 'siteLogo'.Str::random(7));
-        $lists->update($request->validated() + [
-            'title' => $lists->title,
-            'content' => $lists->content,
-            'image' => $imgurl,
+        $validated = $request->validate([
+            'title' => 'bail|required|string',
+            'content' => 'bail|required|string',
+            'image'   => 'bail|required|string'         
         ]);
+        ModelsWhyChooseUs::create($validated);
         return redirect()->route('why-choose-us.index');
     }
 
-    /**
+    /** 
      * Display the specified resource.
      *
      * @param  int  $id
@@ -80,7 +69,7 @@ class whyChooseUs extends Controller
      */
     public function edit($id)
     {
-        return view('admin.whyChooseUs.editform', ['lists' => ModelsWhyChooseUs::findOrFail($id)]);
+        return view('admin.whyChooseUs.editform', ['cards' => ModelsWhyChooseUs::findOrFail($id)]);
     }
 
     /**
@@ -92,10 +81,14 @@ class whyChooseUs extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validated = $request->validated();
-        $lists = ModelsWhyChooseUs::findOrFail($id);
-        $lists->fill($validated);
-        $lists->save();
+        $validated = $request->validated([
+            'title' => 'bail|required|string',
+            'content' => 'bail|required|string',
+            'image'   => 'bail|required|string'
+        ]);
+        $cards = ModelsWhyChooseUs::findOrFail($id);
+        $cards->fill($validated);
+        $cards->save();
 
         return redirect()->back();
     }
