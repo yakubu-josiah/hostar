@@ -4,7 +4,7 @@
 
 @section('content')
     @include('partials.svg')
-    <div class="page-wrapper layout-full">
+    {{-- <div class="page-wrapper layout-full"> --}}
     <!-- #hostar-theme-wrapper -->
     <!-- start preloader -->
     <div class="preloader">
@@ -16,7 +16,7 @@
         </div>
     </div>
     <!-- end preloader -->
-    <x-headbar />
+    <x-headbar :banner="$banner"/>
 
     <!-- start wpo-page-title -->
     <section class="wpo-page-title   crumbs-area-6373cd760efab default-title" style="">
@@ -106,71 +106,25 @@
                                                 <div class="hostar-feature wpo-features-area">
                                                     <div class="container">
                                                         <div class="row">
-                                                            <div class="col-md-4 col-sm-6 custom-grid col-12">
-                                                                <div class="wpo-features-item">
-                                                                    <div class="wpo-features-single">
-                                                                        <div class="wpo-features-icon">
-                                                                            <i class='fi flaticon-startup'></i>
+                                                            @foreach ($card as $item)
+                                                                <div class="col-md-4 col-sm-6 custom-grid col-12">
+                                                                    <div class="wpo-features-item">
+                                                                        <div class="wpo-features-single">
+                                                                            <div class="wpo-features-icon">
+                                                                                <i class='{{ $item->image }}'></i>
+                                                                            </div>
+                                                                            <div class="wpo-features-text">
+                                                                                <h2>{{ $item->title }}</h2>
+                                                                                <p>{{ $item->content }}</p>
+                                                                                <a href="#" class="read-more" target=&quot;_blank&quot;>See More..</a>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="wpo-features-text">
-                                                                            <h2>Faster Loading Speed</h2>
-                                                                            <p>Lorem ipsum dolor sit amet, consectetur
-                                                                                adipiscing elit, sed do eiusmod tempor
-                                                                                incididunt .
-
-                                                                            </p><a href="#" class="read-more"
-                                                                                target=&quot;_blank&quot;>See More..</a>
-                                                                        </div>
+                                                                        {{-- <div class="wpo-features-img">
+                                                                            <img decoding="async" src="{{ asset('images/feature-1.png') }}" alt="">
+                                                                        </div> --}}
                                                                     </div>
-                                                                    <div class="wpo-features-img">
-                                                                        <img decoding="async"
-                                                                            src="{{ asset('images/feature-1.png') }}"
-                                                                            alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-sm-6 custom-grid col-12">
-                                                                <div class="wpo-features-item">
-                                                                    <div class="wpo-features-single">
-                                                                        <div class="wpo-features-icon">
-                                                                            <i class='fi flaticon-label'></i>
-                                                                        </div>
-                                                                        <div class="wpo-features-text">
-                                                                            <h2>99% Uptime Guarantee</h2>
-                                                                            <p>Lorem ipsum dolor sit amet, consectetur
-                                                                                adipiscing elit, sed do eiusmod tempor
-                                                                                incididunt .
-
-                                                                            </p><a href="#" class="read-more"
-                                                                                target=&quot;_blank&quot;>See more..</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wpo-features-img">
-                                                                        <img decoding="async" src="{{ asset('images/feature-2.png') }}" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4 col-sm-6 custom-grid col-12">
-                                                                <div class="wpo-features-item">
-                                                                    <div class="wpo-features-single">
-                                                                        <div class="wpo-features-icon">
-                                                                            <i class='fi flaticon-support'></i>
-                                                                        </div>
-                                                                        <div class="wpo-features-text">
-                                                                            <h2>24/7 Customer Support</h2>
-                                                                            <p>Lorem ipsum dolor sit amet, consectetur
-                                                                                adipiscing elit, sed do eiusmod tempor
-                                                                                incididunt .
-
-                                                                            </p><a href="#" class="read-more"
-                                                                                target=&quot;_blank&quot;>See More..</a>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="wpo-features-img">
-                                                                        <img decoding="async" src="{{ asset('images/feature-3.png') }}" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                                </div> 
+                                                            @endforeach                                                           
                                                         </div>
                                                     </div>
                                                 </div>
@@ -445,7 +399,7 @@
         </div>
     </div>
     <!-- Footer -->
-        <x-footer />
+        <x-footer :banner="$banner" />
     <!-- Footer -->
     </div>
 @include('partials.scripts')
