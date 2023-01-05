@@ -61,7 +61,7 @@
                                 </a>    
                             </x-admin.uiElement>
                             <x-admin.uiElement>
-                                <a href="#">
+                                <a href="{{ route('users-testimonials.index') }}">
                                     <div class="card-header">                                                  
                                         <h5>Testimonials</h5>
                                     </div>
