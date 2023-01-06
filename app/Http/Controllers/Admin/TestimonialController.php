@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TestimonialValidator;
 use App\Models\Testimonials;
+use App\Models\topBanner;
 use Illuminate\Http\Request;
 use League\Flysystem\FileAttributes;
 use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
@@ -19,8 +20,10 @@ class TestimonialController extends Controller
      */
     public function index()
     {
-        $lists = Testimonials::all();
-        return view('admin.testimonials.index', ['testimony' => $lists]);
+        return view('admin.testimonials.index', [
+            'testimony' => Testimonials::all(),
+            'banner' => topBanner::first()
+        ]);
     }
 
     /**
@@ -66,7 +69,10 @@ class TestimonialController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.testimonial.edit', ['testimony' => Testimonials::findOrFail($id)]);
+        return view('admin.testimonials.edit', [
+            'testimony' => Testimonials::findOrFail($id),
+            'banner' => topBanner::first()
+        ]);
     }
 
     /**

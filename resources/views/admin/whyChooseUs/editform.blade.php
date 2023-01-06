@@ -2,7 +2,7 @@
 @section('title', 'Admin - Edit Card Features')
 
 @section('content')
-    <x-admin.dashboard />
+    <x-admin.dashboard :banner="$banner"/>
     <x-admin.wrapper>
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">

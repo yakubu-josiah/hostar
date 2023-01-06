@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Classes\FileUpload;
 use App\Http\Controllers\Controller;
+use App\Models\topBanner;
 use App\Models\whyChooseUs as ModelsWhyChooseUs;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -17,9 +18,10 @@ class whyChooseUs extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $lists = ModelsWhyChooseUs::orderBy('id', 'DESC')->get();
+    {   
         return view('admin.whyChooseUs.index', [
-            'lists' => $lists
+            'lists' => ModelsWhyChooseUs::orderBy('id', 'DESC')->get(),
+            'banner' => topBanner::first()
         ]);
     }
 
@@ -69,7 +71,10 @@ class whyChooseUs extends Controller
      */
     public function edit($id)
     {
-        return view('admin.whyChooseUs.editform', ['cards' => ModelsWhyChooseUs::findOrFail($id)]);
+        return view('admin.whyChooseUs.editform', [
+            'cards' => ModelsWhyChooseUs::findOrFail($id),
+            'banner' => topBanner::first()
+        ]);
     }
 
     /**

@@ -63,7 +63,10 @@ class HomeEdit extends Controller
     }
 
     public function pricingEdit() {
-        return view('admin.homepage.pricingPlans', ['pricing' => PricingPlan::first()]);
+        return view('admin.homepage.pricingPlans', [
+            'pricing' => PricingPlan::first(),
+            'banner' => ModelsTopBanner::first()
+        ]);
     }
 
     public function pricingStore(Request $request) {
@@ -94,21 +97,25 @@ class HomeEdit extends Controller
         $monthPack = Packages::guestPackage('monthly');
         $yearPack = Packages::guestPackage('yearly');
 
-        return view('admin.homepage.packages.index', 
+        return view('admin.packages.index', 
         [
             'month' => $monthPack,
-            'year' => $yearPack
+            'year' => $yearPack,
+            'banner' => ModelsTopBanner::first()
         ]);
     }
 
     public function packageCreate() {
-        return view('admin.homepage.packages.form');
+        return view('admin.packages.form',[
+            'banner' => ModelsTopBanner::first()
+        ]);
     }
 
     public function packageEdit($id) {      
-        return view('admin.homepage.packages.editform', 
+        return view('admin.packages.editform', 
         [
-            'package' => Packages::find($id)
+            'package' => Packages::find($id),
+            'banner' => ModelsTopBanner::first()
         ]);
     }
 
@@ -137,11 +144,16 @@ class HomeEdit extends Controller
     }
 
     public function serviceIndex() {
-        return view('admin.homepage.services.index', ['services' => Services::all()]);
+        return view('admin.services.index', [
+            'services' => Services::all(),
+            'banner' => ModelsTopBanner::first()
+        ]);
     }
 
     public function serviceCreate() {
-        return view('admin.homepage.services.form');
+        return view('admin.services.form', [
+            'banner' => ModelsTopBanner::first()
+        ]);
     }
 
     public function serviceStore(ServiceValidator $request) {
@@ -159,7 +171,10 @@ class HomeEdit extends Controller
     }
 
     public function serviceEdit($id) {
-        return view('admin.homepage.services.edit',['service' => Services::findOrFail($id)]);
+        return view('admin.services.edit',[
+            'service' => Services::findOrFail($id),
+            'banner' => ModelsTopBanner::first()    
+        ]);
     }
 
     public function serviceUpdate(ServiceValidator $request, Services $service) {

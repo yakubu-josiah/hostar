@@ -1,9 +1,9 @@
-<nav class="pcoded-navbar">
+<nav class="pcoded-navbar" :banner="$banner">
     <div class="navbar-wrapper">
         <div class="navbar-brand header-logo">
-            <a href="{{ route('home')}}" class="b-brand">
+            <a href="{{ route('home') }}" class="b-brand">
                 <div class="b-bg">
-                    <img class="b-brand b-bg" src="{{ asset('images/tr-logo.png') }}" alt="">
+                    <img class="b-brand b-bg" src="{{ $banner->logo }}" alt="">
                 </div>
             </a>
             <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>

@@ -2,7 +2,7 @@
 @section('title', 'Admin - Dashboard')
 
 @section('content')
-    <x-admin.dashboard />
+    <x-admin.dashboard :banner="$banner"/>
         <x-admin.wrapper>
             <div class="page-header">
                 <div class="page-block">
@@ -30,9 +30,9 @@
                             </x-admin.uiElement>
 
                             <x-admin.uiElement>
-                                <a href="{{ route('card') }}">
+                                <a href="{{ route('why-choose-us.index') }}">
                                     <div class="card-header">                                                  
-                                        <h5>Cards Features</h5>
+                                        <h5>Why Choose Us</h5>
                                     </div>
                                 </a>    
                             </x-admin.uiElement>

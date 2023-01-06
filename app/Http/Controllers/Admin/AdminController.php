@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\topBanner;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -30,6 +31,7 @@ class AdminController extends Controller
     public function loginAdmin(Request $request)
     {
         if (auth()->guard('admin')->user()) {
+           
             return redirect()->route('adminDash');
         } else {
             return view('admin.auth.login');
@@ -39,7 +41,8 @@ class AdminController extends Controller
 
     public function dashboard() 
     {
-        return view('admin.dashboard');
+        $banner = topBanner::first();
+        return view('admin.dashboard', ['banner' => $banner]);
     }
 
     public function reg(Request $request,
