@@ -6,7 +6,7 @@
     <x-admin.wrapper>
         <x-admin.nametag />
         <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0 ">
-            <form action="{{ route('users-testimonials.store') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
+            <form action="{{ route('users-experience.store') }}" method="POST"  enctype="multipart/form-data" class="align-item-center">
                 @csrf
                 <div class="form-row mx-auto d-flex" >
                     <div class="col-5 m-auto">

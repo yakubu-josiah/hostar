@@ -24,15 +24,16 @@
                             <li>{{ ucwords($item->content) }}</li>
                         </ul>
                         <div class="card-body inline">
-                            <a href="{{ route('users-testimonials.edit', [$item->id]) }}" class="btn btn-outline-info text-body py-1        ">Edit</a>
-                            <a href="#" class="btn btn-danger py-1">Delete</a>
+                            <a href="{{ route('users-experience.edit', [$item->id]) }}" class="btn btn-outline-info text-body py-1">Edit</a>
+                            <form action="{{ route('users-experience.destroy', [$item->id]) }}" method="POST" class="d-inline">
+                                @csrf @method('DELETE')
+                                <input type="submit" class="btn btn-danger text-body py-1" value="Delete" />
+                            </form>
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
-
-
 
     </x-admin.maincontent>
 </x-admin.wrapper>

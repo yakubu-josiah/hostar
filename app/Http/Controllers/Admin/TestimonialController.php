@@ -3,7 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TestimonialValidator;
+use App\Models\Testimonials;
 use Illuminate\Http\Request;
+use League\Flysystem\FileAttributes;
+use Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag;
+use Symfony\Component\HttpFoundation\Test\Constraint\RequestAttributeValueSame;
 
 class TestimonialController extends Controller
 {
@@ -14,7 +19,8 @@ class TestimonialController extends Controller
      */
     public function index()
     {
-        //
+        $lists = Testimonials::all();
+        return view('admin.testimonials.index', ['testimony' => $lists]);
     }
 
     /**
@@ -24,7 +30,7 @@ class TestimonialController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.testimonials.form');
     }
 
     /**
@@ -33,9 +39,12 @@ class TestimonialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TestimonialValidator $request)
     {
-        //
+        $validated = $request->validated();
+        Testimonials::create($validated);
+
+        return redirect()->route('');
     }
 
     /**
@@ -57,7 +66,7 @@ class TestimonialController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.testimonial.edit', ['testimony' => Testimonials::findOrFail($id)]);
     }
 
     /**
@@ -67,9 +76,14 @@ class TestimonialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TestimonialValidator $request, $id)
     {
-        //
+        $validated = $request->validated();
+        $testimony = Testimonials::findOrFail($id);
+        $testimony->fill($validated);
+        $testimony->save();
+
+        return redirect()->route('admin.testimonials.index');
     }
 
     /**
@@ -80,6 +94,9 @@ class TestimonialController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $testimony = Testimonials::findOrFail($id);
+        $testimony->delete();
+        
+        return back();
     }
 }
