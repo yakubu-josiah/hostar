@@ -5,28 +5,36 @@
     <x-admin.dashboard />
     <x-admin.wrapper>
         <x-admin.nametag />
-        <div class="d-flex w-100 flex-column flex-md-row mb-4">
-            <div><h3 class="text-left mx-3">List of All</h3></div>
-            <div class="my-auto"><a href="{{ route('why-choose-us.create') }}" class="h5 text-info bg-light shadow p-2">Add New</a></div>
-        </div>
-        <div class="border border-info justify-content-center">
-            <div class="row mx-auto px-2">
-                @foreach ($lists as $item)
-                <div class="card col-md-4 col-sm-6 col-12 border border-info custom-grid mx-auto  mt-5" style="background-color:#cdd2d6">
-                    <div>
-                        <img src="{{ $item->image }}" alt="" />
-                        <h4>{{ $item->title }}</h4>
-                        <p>{{ $item->content }}</p>
-                    </div>
-                     @endforeach
-                    <div class="align-middle justify-content-center p-4">
-                        <a href="{{ route('why-choose-us.edit', [$item->id]) }}" class="btn btn-outline-info text-body p-2">Edit</a>
-                        <form action="{{ route('why-choose-us.destroy', $item->id) }}" method="POST" class="d-inline">
-                            @csrf @method('DELETE')
-                            <input type="submit" value="Delete" class="btn btn-danger p-2">            
-                        </form>
-                    </div>
+        <x-admin.maincontent style="background-color:#d3caca24; padding-bottom: 0;" class="pb-0">
+            <div class="h3">
+                <h3 class="mb-4">List of Services Offered</h3>
+            </div>
+            <div class="border border-info justify-content-center">
+                <div class="row mx-auto px-3 w-100">
+                    @foreach ($lists as $item)
+                        <div class="card col-md-4 col-sm-6 col-12 border border-info custom-grid " style="background-color:#cdd2d6">
+                            <h4 class="card-header mt-2 p-3">{{ $item->title }}</h4>
+                            <div class="card-body">
+                                <p class="pt_t text-success">Service was added: {{ $item->created_at->diffForHumans() }}!!</p>
+                                @if (now()->diffInMinutes($item->created_at) < 5) <div class="alert alert-info">New Comment!!
+                                @endif
+                            </div>
+                            <ul class="list-group list-group-flush text-center">
+                                <li>{{ ucwords($item->content) }}</li>
+                            </ul>
+                            <div class="card-body inline">
+                                <a href="{{ route('why-choose-us.edit', [$item->id]) }}" class="btn btn-outline-info text-body py-1">Edit</a>
+                                <form action="{{ route('why-choose-us.destroy', [$item->id]) }}" method="POST" class="d-inline">
+                                    @csrf @method('DELETE')
+                                    <input type="submit" class="btn btn-danger text-body py-1" value="Delete" />
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
+            </div>
+    
+        </x-admin.maincontent>
 
             <script type="text/javascript">
                
