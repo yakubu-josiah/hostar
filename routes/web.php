@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Admin\whyChooseUs;
-use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeEdit;
@@ -101,19 +100,6 @@ Route::prefix('/admin')->group(function (){
     
 });
 
+require 'admin.php';
 
-
-Route::middleware('admin:admin')->group(function (){
-    Route::group(['prefix' => 'admin'], function (){
-        Route::controller(AdminController::class)->group(function(){
-            Route::get('/dashboard', 'dashboard')->name('adminDash');
-
-        });   
-        
-        
-        Route::group(['prefix' => 'content-management'], function(){
-            Route::resource('why-choose-us', whyChooseUs::class);
-        });
-    });
-});
 

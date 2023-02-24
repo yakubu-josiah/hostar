@@ -159,8 +159,8 @@
                                                                                 <i class='fi flaticon-startup'></i>
                                                                             </div>
                                                                             <div class="wpo-features-text">
-                                                                                <h2>{{ $card->fst_h2 }}</h2>
-                                                                                <p>{{ $card->fst_p }}</p>
+                                                                                {{-- <h2>{{ $card->fst_h2 }}</h2>
+                                                                                <p>{{ $card->fst_p }}</p> --}}
                                                                             </div>
                                                                         </div>
                                                                         <div class="wpo-features-img">
@@ -175,8 +175,8 @@
                                                                                 <i class='fi flaticon-label'></i>
                                                                             </div>
                                                                             <div class="wpo-features-text">
-                                                                                <h2>{{ $card->scd_h2 }}</h2>
-                                                                                <p>{{ $card->scd_p }}
+                                                                                {{-- <h2>{{ $card->scd_h2 }}</h2>
+                                                                                <p>{{ $card->scd_p }} --}}
                                                                                 </p>
                                                                             </div>
                                                                         </div>
@@ -192,8 +192,8 @@
                                                                                 <i class='fi flaticon-support'></i>
                                                                             </div>
                                                                             <div class="wpo-features-text">
-                                                                                <h2>{{ $card->thd_h2 }}</h2>
-                                                                                <p>{{ $card->thd_p }}
+                                                                                {{-- <h2>{{ $card->thd_h2 }}</h2>
+                                                                                <p>{{ $card->thd_p }} --}}
                                                                                 </p>
                                                                             </div>
                                                                         </div>

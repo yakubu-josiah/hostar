@@ -14,7 +14,7 @@ class HomeController extends Controller
     
     public function home() {
         $banner = topBanner::first();
-        $card = CardFeatures::first();
+        // $card = CardFeatures::first();
         $pricing = PricingPlan::first();
         
         $monthPack = Packages::guestPackage('monthly');
@@ -23,7 +23,7 @@ class HomeController extends Controller
 
         return view('welcome', [
             'banner' => $banner,
-            'card' => $card,
+            // 'card' => $card,
             'pricing' => $pricing,
             'monthPack' => $monthPack,
             'yearPack' => $yearPack,
