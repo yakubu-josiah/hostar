@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Guest\AboutController;
 use App\Http\Controllers\Admin\whyChooseUs;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Guest\ContactController;
+use App\Http\Controllers\Guest\HomeController;
 use App\Http\Controllers\HomeEdit;
-use App\Http\Controllers\HostingController;
-use App\Http\Controllers\ShopController;
+use App\Http\Controllers\Guest\HostingController;
+use App\Http\Controllers\Guest\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
