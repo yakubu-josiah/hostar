@@ -1,5 +1,7 @@
 @extends('partials.layout')
 @section('title', 'Order Placement')
+@section('description', 'Hostar Packages Available')
+f
 
 
 @section('content')

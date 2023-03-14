@@ -1,5 +1,7 @@
 @extends('partials.layout')
 @section('title', 'Shop With Us')
+@section('description', 'Hostar Services Offered')
+
 
 
 @section('content')
