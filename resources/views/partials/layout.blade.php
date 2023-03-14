@@ -10,6 +10,7 @@
     <meta name="theme-color" content="">
     <link rel="profile" href="//gmpg.org/xfn/11">
     <title>Hostar - Web Hosting &#8211; @yield('title')</title>
+    <meta name="description" content="@yield('description') - {{ config('app.name') }}" />
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//www.google.com' />
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />

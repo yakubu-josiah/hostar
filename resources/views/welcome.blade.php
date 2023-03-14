@@ -1,5 +1,7 @@
 @extends('partials.layout')
 @section('title', 'Dashboardpage')
+@section('description', 'The Hostar Hosting Platform ')
+
 
 @section ('content')
     @include('partials.svg')
